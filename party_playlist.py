@@ -39,7 +39,7 @@ class Party():
 		prev_input = 0
 		
 		while 1:
-			INPUTS = (i , GPIO.input(i) for i in (5,17,12) #pins to check	
+			INPUTS = (i , GPIO.input(i) for i in (5,17,12)) #pins to check	
 			for pin, result in INPUTS:
 				if result and not prev_input:
 					self.input_actions(pin)
