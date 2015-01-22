@@ -28,12 +28,11 @@ class Party():
 		prev_input = 0
 		
 		while 1:
-			INPUTS = (i , GPIO.input(i) for i in (5,17,12)) #pins to check	
+			INPUTS = ((i , GPIO.input(i)) for i in (5,17,12)) #pins to check	
 			for pin, result in INPUTS:
 				if result and not prev_input:
 					self.input_actions(pin)
 					prev_input = 1
 					break
 			prev_input = 0
-			if not prev_input
-			time.sleep(0.05)		#should help stop bouncing 
+			time.sleep(0.05)	#should help stop bouncing 
