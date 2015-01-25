@@ -4,6 +4,8 @@ GPIO.setmode(GPIO.BCM)
 import _thread as thread
 from queue import Queue
 
+import nxppy
+
 class Party():
 	# Scanning for button Presses
 	# Scanning for input via web interface or app
@@ -20,8 +22,8 @@ class Party():
 	def __init__(self):
 		self.data = Queue()
 		self.input_actions = {5:lambda:print(5),7:None,12:None}
-		self.check_buttons()		# Buttons change the playback mode
-	
+		#self.check_buttons()		# Buttons change the playback mode
+		self.test()	
 	
 	
 	def check_buttons(self):		# Maps Input Pins to different actions
@@ -35,4 +37,20 @@ class Party():
 					prev_input = 1
 					break
 			prev_input = 0
-			time.sleep(0.05)	#should help stop bouncing 
+			time.sleep(0.05)	#should help stop bouncing
+	
+	def test(self):
+		import random
+		while 1:
+			card = nxppy.Mifare()
+			try:
+				uid = card.select()
+			except nxppy.SelectError:
+				print('0   ', random.Random())
+			else:
+				block10bytes = mifare.read_block(10)
+				print('1 : ',block10bytes)
+			time.sleep(0.4)
+if __name__ == '__main__':
+	app = Party()
+	 
