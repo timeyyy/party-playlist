@@ -33,16 +33,16 @@ version = 1.2.0
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy
+requirements = kivy, sqlite3, mutagen, peewee
 
 # (list) Garden requirements
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/img/presplash.jpg
+presplash.filename = %(source.dir)s/img/preslash.jpg
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/data/icon.png
+icon.filename = %(source.dir)s/img/icon.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait

@@ -11,11 +11,9 @@ import gui_main
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 
-
 class PartyPlaylist(App):
-    def build(self):
-        return gui_main.Main()
-
+	def build(self):
+		return gui_main.Main()
 	def on_resume(self):
 		print('resuming')
 	def on_pause(self):

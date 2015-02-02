@@ -1,6 +1,7 @@
 from __future__ import print_function
 from __future__ import with_statement
 import os
+from os.path import sep, expanduser, isdir, dirname
 
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
@@ -9,12 +10,14 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.progressbar import ProgressBar
 from kivy.uix.carousel import Carousel
 from kivy.uix.scrollview import ScrollView
+from kivy.garden.filebrowser import FileBrowser
 
 
-# this will update the graphics automatically (75% done)
-#~ pb.value = 750
+
+import func
+import db_utils
+
 class Main(Carousel):
-	#http://kivy.org/docs/api-kivy.uix.carousel.html?highlight=.uix#kivy.uix.carousel
 	def __init__(self, **kwargs):
 		Carousel.__init__(self,**kwargs)
 		self.direction = 'right'
@@ -24,28 +27,6 @@ class Main(Carousel):
 		self.add_widget(self.screen_1)
 		self.add_widget(self.screen_2)
 		
-		#~ self.cols = 3 
-		#~ b1 = Button(text='Create List')
-		#~ b1.bind(on_press=lambda s:print('create'))
-		#~ self.add_widget(b1)
-		#~ 
-		#~ b2 = Button(text='Push')
-		#~ b2.bind(on_press=lambda s:print('push to server'))
-		#~ self.add_widget(b2)
-		#~ 
-		#~ b3 = Button(text='View List')
-		#~ b3.bind(on_press=lambda s:print('view list'))
-		#~ self.add_widget(b3)
-		
-		#~ self.username = Label(multiline=False)
-		#~ self.add_widget(self.username)
-		#~ self.add_widget(Label(text='password'))
-		#~ self.password = TextInput(password=True, multiline=False)
-		#~ self.add_widget(self.password)
-
-#http://kivy.org/docs/api-kivy.uix.pagelayout.html?highlight=.uix#kivy.uix.pagelayout
-#http://kivy.org/docs/api-kivy.uix.codeinput.html?highlight=.uix#kivy.uix.codeinput
-
 class Welcome(GridLayout):
 	intro_text = """
 	Welcome to Party Playlist!
@@ -62,25 +43,27 @@ class Welcome(GridLayout):
 	def __init__(self, **kwargs):
 		GridLayout.__init__(self, **kwargs)
 		self.cols = 1
-		self.spacing = 10
-		self.label = Label(text=self.intro_text)
-		self.add_widget(self.label)
-		self.recreate_list = Button(text='New List')
-		self.recreate_list.bind(on_press=self.make_music_list)
-		self.add_widget(self.recreate_list)
+		#~ self.spacing = 10
+		label = Label(text=self.intro_text)
+		self.add_widget(label)
+		recreate_list = Button(text='New List')
+		recreate_list.bind(on_press=self.make_music_list)
+		self.add_widget(recreate_list)
+		settings=Settings()
+		self.add_widget(settings)
 		self.transfer_wifi = Button(text='Transfer over Net')
 		self.add_widget(self.transfer_wifi)
 
+		db_utils.new(overwrite=False)	# make db if it doesnt exist
+		
 		self.make_music_list()
 		
 	def make_music_list(self, *args):
-		def hard_drive():
-			pass
-		def facebook():
-			pass
-		print('Making new music ')
-		print(os.listdir(os.getcwd()))
-
+		print('Making new music List ')
+		path='/media'
+		func.hard_drive(path)
+		#~ print(os.listdir(os.getcwd()))
+		
 class ViewList(GridLayout):
 	def __init__(self, **kwargs):
 		GridLayout.__init__(self, **kwargs)
@@ -99,8 +82,34 @@ class ViewList(GridLayout):
 		self.add_widget(self.label)
 		self.add_widget(self.scroll)
 		
-		
-
 		#~ pb = ProgressBar(max=1000)
 		#~ pb.value = 750
 		#http://kivy.org/docs/api-kivy.uix.progressbar.html?highlight=.uix#kivy.uix.progressbar
+
+class Settings(GridLayout):
+	def __init__(self, **kwargs):	
+		GridLayout.__init__(self, **kwargs)
+		self.cols = 1
+		#~ self.spacing = 10
+		label = Label(text='Select Music Dir')
+		self.add_widget(label)
+		browse = GetFolder()
+		self.add_widget(browse)
+
+class GetFolder(FileBrowser):
+	def __init__(self, **kwargs):
+		FileBrowser.__init__(self,**kwargs)
+		self.select_string = 'Select'
+		self.dirselect = 1
+
+		user_path = expanduser('~') + sep + 'Documents'
+		self.favorites = [(user_path, 'Documents')]
+
+		self.bind(on_success=self._fbrowser_success,
+				on_canceled=self._fbrowser_canceled)
+
+	def _fbrowser_canceled(self, instance):
+		print('cancelled, Close self.')
+
+	def _fbrowser_success(self, instance):
+		print(instance.selection)
