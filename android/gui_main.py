@@ -2,8 +2,10 @@ from __future__ import print_function
 from __future__ import with_statement
 import os
 from os.path import sep, expanduser, isdir, dirname
+from pprint import pprint
 
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
@@ -11,23 +13,21 @@ from kivy.uix.progressbar import ProgressBar
 from kivy.uix.carousel import Carousel
 from kivy.uix.scrollview import ScrollView
 from kivy.garden.filebrowser import FileBrowser
-
-
+from kivy.properties import ObjectProperty
 
 import func
 import db_utils
 
-class Main(Carousel):
-	def __init__(self, **kwargs):
-		Carousel.__init__(self,**kwargs)
-		self.direction = 'right'
-		self.loop = 1
-		self.screen_1 = Welcome()
-		self.screen_2 = ViewList()
-		self.add_widget(self.screen_1)
-		self.add_widget(self.screen_2)
+class MainCarousel(Carousel):	
+
+	def make_music_list(self, *args):
+		viewer = self.ids['viewer']
 		
-class Welcome(GridLayout):
+		paths =("/media","/home/alfa/Downloads","/daccc")
+		for path in paths:
+			func.hard_drive(path, viewer)
+
+class Welcome(BoxLayout):
 	intro_text = """
 	Welcome to Party Playlist!
 	
@@ -41,8 +41,9 @@ class Welcome(GridLayout):
 	To view your Playlist swipe to the side
 	"""
 	def __init__(self, **kwargs):
-		GridLayout.__init__(self, **kwargs)
-		self.cols = 1
+		BoxLayout.__init__(self, **kwargs)
+		self.orientation = 'vertical'
+		#~ self.cols = 1
 		#~ self.spacing = 10
 		label = Label(text=self.intro_text)
 		self.add_widget(label)
@@ -54,15 +55,6 @@ class Welcome(GridLayout):
 		self.transfer_wifi = Button(text='Transfer over Net')
 		self.add_widget(self.transfer_wifi)
 
-		db_utils.new(overwrite=False)	# make db if it doesnt exist
-		
-		self.make_music_list()
-		
-	def make_music_list(self, *args):
-		print('Making new music List ')
-		path='/media'
-		func.hard_drive(path)
-		#~ print(os.listdir(os.getcwd()))
 		
 class ViewList(GridLayout):
 	def __init__(self, **kwargs):
