@@ -1,10 +1,20 @@
-import time
-import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM)
-import _thread as thread
-from queue import Queue
+from __future__ import print_function
+from __future__ import with_statement
 
-import nxppy
+import time
+try:
+	import _thread as thread
+	from queue import Queue
+except ImportError:
+	import thread
+	from Queue import Queue
+try:
+	import RPi.GPIO as GPIO
+	GPIO.setmode(GPIO.BCM)
+except ImportError:pass
+
+import db_utils
+#~ import nxppy
 
 class Party():
 	# Scanning for button Presses
@@ -23,8 +33,8 @@ class Party():
 		self.data = Queue()
 		self.input_actions = {5:lambda:print(5),7:None,12:None}
 		#self.check_buttons()		# Buttons change the playback mode
-		self.test()	
-	
+		#~ self.test()	
+		self.test2()
 	
 	def check_buttons(self):		# Maps Input Pins to different actions
 		prev_input = 0
@@ -38,18 +48,46 @@ class Party():
 					break
 			prev_input = 0
 			time.sleep(0.05)	#should help stop bouncing
+		
+	def test2(self):	
+		#~ print(Track.__dict__)
+		Track = db_utils.load_track_db('musiclist.db')
+		for track in Track.select().order_by(Track.artist,Track.album,Track.title):
+			print(track.artist,track.title)	
 	
-	def test(self):
-		import random
-		while 1:
-			card = nxppy.Mifare()
-			try:
-				uid = card.select()
-			except nxppy.SelectError:
-				print('0   ', random.Random())
-			else:
-				block10bytes = mifare.read_block(10)
-				print('1 : ',block10bytes)
+	def run_down(self):
+		'''
+		New Db gotten,
+		
+			add a new entry to UserData
+			
+			add a new PlayListInfo
+			
+			add all the songs from the database to PlayistTrack
+			
+			parse according to setting and add results to FinalPlayList
+			
+			Play Songs
+		
+		
+		When Genre Changed
+		When A New User Adds Data how to minimze calculations	
+		
+		'''
+		pass
+			
+	def test(self):		
+		#~ import random
+		#~ while 1:
+			#~ pass
+			#~ card = nxppy.Mifare()
+			#~ try:
+				#~ uid = card.select()
+			#~ except nxppy.SelectError:
+				#~ print('0   ', random.Random())
+			#~ else:
+				#~ block10bytes = mifare.read_block(10)
+				#~ print('1 : ',block10bytes)
 			time.sleep(0.4)
 if __name__ == '__main__':
 	app = Party()

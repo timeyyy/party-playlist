@@ -13,7 +13,7 @@ package.domain = org.thd
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,db
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -29,14 +29,14 @@ source.include_exts = py,png,jpg,kv,atlas
 #version.filename = %(source.dir)s/main.py
 
 # (str) Application versioning (method 2)
-version = 1.2.0
+version = 1.0.0
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
 requirements = kivy, sqlite3, mutagen, peewee
 
 # (list) Garden requirements
-#garden_requirements =
+garden_requirements = filebrowser
 
 # (str) Presplash of the application
 presplash.filename = %(source.dir)s/img/preslash.jpg
@@ -56,7 +56,7 @@ fullscreen = 1
 #
 
 # (list) Permissions
-android.permissions = INTERNET
+android.permissions = INTERNET, ACCESS_WIFI_STATE, NFC
 
 # (int) Android API to use
 #android.api = 14
@@ -110,7 +110,7 @@ android.permissions = INTERNET
 #android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png
 
 # (str) XML file to include as an intent filters in <activity> tag
-#android.manifest.intent_filters =
+android.manifest.intent_filters =
 
 # (list) Android additionnal libraries to copy into libs/armeabi
 #android.add_libs_armeabi = libs/android/*.so

@@ -20,9 +20,8 @@ class PartyPlaylist(App):
 	def build(self):
 		return gui_main.MainCarousel()
 	def on_start(self):
-		db_utils.new(overwrite=True)	# make db if it doesnt exist
+		db_utils.new(overwrite=False)	# make db if it doesnt exist
 		self.root.make_music_list()		# root window or parent window i.e our maincoursel
-		pprint(self.root.ids)
 	def on_resume(self):
 		print('resuming')
 	def on_pause(self):
