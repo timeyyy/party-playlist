@@ -38,15 +38,3 @@ def hard_drive(start_path):
 									source = 'hard_drive - {0}'.format(root))
 		new_track.save()
 		yield new_track 
-
-
-def nfc():
-	NfcAdapter = autoclass('android.nfc.NfcAdapter')
-	PythonActivity = autoclass('org.renpy.android.PythonActivity')
-	Intent = autoclass('android.content.Intent')
-	IntentFilter = autoclass('android.content.IntentFilter')
-	PendingIntent = autoclass('android.app.PendingIntent')
-	NdefRecord = autoclass('android.nfc.NdefRecord')
-	NdefMessage = autoclass('android.nfc.NdefMessage') 
-	# import the needed Java class
-	#~ PythonActivity = jnius.autoclass('org.renpy.android.PythonActivity')

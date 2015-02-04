@@ -23,9 +23,7 @@ def hard_drive(start_path):
 			for song in music:
 				s_info = mutagen.File(song, easy=True)		# Gueses the file type and all that
 				if s_info.info.length/60 < 12:				# Songs must be less than 12 minutes long, filter out podcasts etc
-					
 					title = s_info.get('title', None)		
-					print(title)
 					artist = s_info.get('artist',None)
 					album = s_info.get('album',None)
 					genre = s_info.get('genre', None)
@@ -39,16 +37,4 @@ def hard_drive(start_path):
 		new_track = db_utils.Track(title=title, artist=artist, album=album, genre=genre,
 									source = 'hard_drive - {0}'.format(root))
 		new_track.save()
-		return new_track 
-
-
-def nfc():
-	NfcAdapter = autoclass('android.nfc.NfcAdapter')
-	PythonActivity = autoclass('org.renpy.android.PythonActivity')
-	Intent = autoclass('android.content.Intent')
-	IntentFilter = autoclass('android.content.IntentFilter')
-	PendingIntent = autoclass('android.app.PendingIntent')
-	NdefRecord = autoclass('android.nfc.NdefRecord')
-	NdefMessage = autoclass('android.nfc.NdefMessage') 
-	# import the needed Java class
-	#~ PythonActivity = jnius.autoclass('org.renpy.android.PythonActivity')
+		yield new_track 

@@ -14,23 +14,27 @@ from kivy.uix.carousel import Carousel
 from kivy.uix.scrollview import ScrollView
 from kivy.garden.filebrowser import FileBrowser
 from kivy.properties import ObjectProperty
-
+import jnius
+from jnius import autoclass, cast
+		
 import func
 import db_utils
 
 class MainCarousel(Carousel):	
-
+	
 	def make_music_list(self, *args):
 		viewer = self.ids['viewer']		
-		return
-		os.chdir('/sdcard/media')
-		pprint(os.listdir())
-		return
+		os.chdir(os.sep)
 		paths =("/sdcard/media","/home/alfa/Downloads","/daccc")
 		for path in paths:
-			track = func.hard_drive(path)
-			viewer.text = '{0}\n{1} :: {2}'.format(viewer.text, track.artist, track.title)
-
+			for track in func.hard_drive(path):		# this generator auto adds to db and returns the tracks
+				try:
+					viewer.text = '{0}\n{1} :: {2}'.format(viewer.text, track.artist, track.title)
+				except AttributeError:pass	# if any artist or titles are none do not add em to the viewer
+			
+		for track in db_utils.Track.select().order_by(db_utils.Track.artist):
+			print(track.artist)	
+				
 class Welcome(BoxLayout):
 	intro_text = """
 	Welcome to Party Playlist!
