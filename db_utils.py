@@ -48,7 +48,7 @@ class Track(peewee.Model):
 	class Meta:
 		database = None
 
-def create_new(database, test=False):					
+def setup_orm(database, create=True, test=False):					
 	### These get a new db every time, the db name is the playlist name	
 	db = peewee.SqliteDatabase(database)	
 	db.connect()
@@ -79,10 +79,8 @@ def create_new(database, test=False):
 		artist = peewee.CharField(null=1)
 		album = peewee.CharField(null=1)
 		genre = peewee.CharField(null=1)
-		score = peewee.CharField(null=1)
-	if not test:			
-		db.create_tables([UserData, ScoredTrack ,PlayList])
-	else:
+		score = peewee.CharField(null=1)				
+	if test:
 		pass
 		#~ print('Test db recreating..')
 		#~ db.close()
@@ -90,6 +88,8 @@ def create_new(database, test=False):
 		#~ db = peewee.SqliteDatabase(database)
 		#~ db.connect()
 		#~ db.create_tables([UserData, ScoredTrack ,PlayList])
+	elif create:
+		db.create_tables([UserData, ScoredTrack ,PlayList])
 	return UserData, ScoredTrack ,PlayList
 
 #~ class change_db():			DIDNT WORK zzz, cannot return from init.. wanted to use as a normal and context manager,
@@ -112,7 +112,29 @@ def changed_db(orm_class, new_db):
 	yield orm_class
 	#~ orm_class._meta.database = original_db
         
-
+def list_playlists(name=None):
+	print()
+	if not name:
+		print('All Playlists.. (use the id value for getting more info or deleting)')
+		for playlist in PlaylistInfo.select():
+			print(playlist.id,	playlist.name)
+		print()
+	else:
+		try:
+			try:
+				int(name)
+				playlist = PlaylistInfo.get(id=name)
+			except ValueError:
+				playlist = PlaylistInfo.get(name=name)
+			print('Data for Playlist :: ', playlist.name)
+			print()
+			for key,value in playlist._data.items():
+				print(key,':	',value)
+		except Exception as err:
+			if 'DoesNotExist' in str(err.__class__):
+				print('That playlist doesnot exist...')
+			else:
+				raise err
 if __name__ == '__main__':		
-
-	create_blank_db(test=1)
+	list_playlists(1)
+	#~ create_blank_db(test=1)

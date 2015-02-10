@@ -8,13 +8,14 @@ Usage:
 	party_playlist.py play <name> [--profile]
 	party_playlist.py export <name> 
 	party_playlist.py cfg 
-	party_playlist.py list 
+	party_playlist.py list [name]
 	party_playlist.py [-t | --test]
 
 Options:
 	new <name>	Create a new playlist and start listening for new users
 	load <name>	Loads a previously created list, use timeout to control how long to set it active
 	play <name> Just play Tracks
+	list [name] Either list all playlists or enter the name or id of the playlist to view specifics
 	-t --test	testing mode will create if doesnt exists, and just load if it does
 """
 
@@ -119,7 +120,9 @@ class Party():
 if __name__ == '__main__':
 	#~ import sys
 	#~ print(sys.argv)
-	args = docopt(__doc__,argv=['new','asssshaha1111111','--test'])
+	#~ args = docopt(__doc__,argv=['new','testing','--test'])
+	args = docopt(__doc__,argv=['load','testing223'])
+	args = docopt(__doc__,argv=['list'])
 	#~ print(help(docopt))
 	#~ pprint(args)
 	
@@ -133,7 +136,8 @@ if __name__ == '__main__':
 		Party(load=LOAD, name=args['<name>'], timeout=args['--timeout'], profile=args['--profile'], test=TEST)
 	elif args['play']:pass
 	elif args['export']:pass
-	elif args['list']:pass
+	elif args['list']:
+		db_utils.list_playlists(args['name'])
 	elif args['cfg']:pass
 	#~ elif args['-test']:pass
 	#~ Party(new=True)

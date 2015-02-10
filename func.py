@@ -1,3 +1,4 @@
+import sys
 import os
 from pprint import pprint
 from collections import defaultdict
@@ -39,6 +40,7 @@ def create_new_playlist(new_name, test=False):
 	return playlist_info
 	
 def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=False, test=False):
+	#Setting up cfg and formatting variable names
 	if '.db' in playlist_db_name:
 		playlist_db_name = playlist_db_name.split('.')[0]
 	if arg_timeout:
@@ -50,11 +52,23 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 		playlist_info = PlaylistInfo.get(PlaylistInfo.name == playlist_db_name)
 		if playlist_info.users:
 			playlist_info.users = json.loads(playlist_info.users)	# its a list saved as a string so turning it into a python object
-		if not load and not test:		
-			raise FileExistsError('Playlist already exists, use either --test to ignore this, or delete the playlist, or use the load command') 
+		if not load and not test:
+			print()
+			print('Playlist already exists')
+			print('Either: --test to ignore, delete the playlist, or use the load command') 
+			print()
+			sys.exit()		
+
 	except Exception as err:
+		print('DoesNotExist!!!!!!!')
 		if 'DoesNotExist' not in str(err.__class__):
 			raise err
+		elif load:
+			print()
+			print('Playlist Does not exist!')
+			print('Use the list command to view playlists or new to create it !')
+			print()
+			sys.exit()
 		else:
 			playlist_info = create_new_playlist(playlist_db_name, test=test)
 	# If our playlist has been in use for over a certain make a new one		
@@ -69,7 +83,8 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 			playlist_info = create_new_playlist(playlist_db_name, test=test)
 		
 	# Creating or loading the Database 
-	UserData, ScoredTrack, PlayList = db_utils.create_new(playlist_db_name+'.db', test=test)
+	UserData, ScoredTrack, PlayList = db_utils.setup_orm(playlist_db_name+'.db', create=not load, test=test)
+	
 	# Calculating Points for tracks 
 	filenames = []						# Get all files in the cwd		#http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python
 	for root, dirs, files in os.walk('new_track_info'):	# add to tims tools for listing files...
@@ -84,7 +99,7 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 		# Save the user data
 		try:
 			user_data = UserData.create(phone_name=user)
-		except peewee.IntegrityError:
+		except peewee.IntegrityError:	# already exists
 			pass
 		with db_utils.changed_db(db_utils.Track,os.path.join(os.getcwd(),db)) as T:			# first time with orms, im changing the db of the orm class
 			for track in T.select().order_by(T.artist,T.album,T.title):
@@ -113,8 +128,9 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 				first_time_adding()
 			else:
 				# Modify exisiting scored Tracks
-				print('MODIFYING, either figure out a way to do it server side, otherwise client side easier')
-				pass
+				print('User already added tracks!!!, need to modify either figure out a way to do it server side, otherwise client side easier')
+				print('atm just rehashing everything..')
+				first_time_adding()
 			finally:
 				if user not in playlist_info.users:
 					#~ print('adding new user comeon ')
@@ -123,7 +139,6 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 					playlist_info.save()
 			
 			### Rehsashing all the tracks... 
-			
 			if CFG['playing']['discovery_mode'] == True:
 				print('discoverying new tracks')
 			

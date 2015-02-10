@@ -1,4 +1,4 @@
-python "party_playlist.py"
+python "audio.py"
 
 pause
 del "%0"
