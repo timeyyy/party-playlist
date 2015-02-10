@@ -5,7 +5,7 @@ import wave
 
 from pydub import AudioSegment
 
-MUSIC_DIR = "~/music"
+MUSIC_DIR = "/home/pi/music"
 FILE = 'waves1.wav'
 FILE_SIZE = os.path.getsize(FILE)
 CHUNK_SIZE = 1024
