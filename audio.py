@@ -22,13 +22,18 @@ def run():
 	
 	for file in filenames:
 		print("Transcodeing into wav", file)
-		song = AudioSegment.from_mp3(file)
+		try:
+			song = AudioSegment.from_mp3(file)
+		except Exception:
+			print('Problems happend')
+			continue
 		EXPORT_NAME = "exported.wav"
 		song.export(EXPORT_NAME, format="wav")
 		play(EXPORT_NAME)
 		
 	
 def play(song):
+	print('playing song now!')
 	wf = wave.open(song, 'rb')
 	p = pyaudio.PyAudio()
 	stream = p.open(
