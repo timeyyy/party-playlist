@@ -5,6 +5,7 @@ import wave
 
 from pydub import AudioSegment
 
+MUSIC_DIR = "~/music"
 FILE = 'waves1.wav'
 FILE_SIZE = os.path.getsize(FILE)
 CHUNK_SIZE = 1024
@@ -13,10 +14,22 @@ RATE = 44100
 
 chunk = 1024
 def run():
-	song = AudioSegment.from_mp3()
-	print(song.__dict__)
-def play():
-	wf = wave.open(FILE, 'rb')
+	filenames = []						# Get all files in the cwd		#http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python
+	for root, dirs, files in os.walk(MUSIC_DIR):	# add to tims tools for listing files...
+		root_and_files = [os.path.join(root, file) for file in files]
+		filenames.extend(root_and_files)
+		break
+	
+	for file in filenames:
+		print("Transcodeing into wav", file)
+		song = AudioSegment.from_mp3(file)
+		EXPORT_NAME = "exported.wav"
+		song.export(EXPORT_NAME, format="wav")
+		play(EXPORT_NAME)
+		
+	
+def play(song):
+	wf = wave.open(song, 'rb')
 	p = pyaudio.PyAudio()
 	stream = p.open(
 		format = p.get_format_from_width(wf.getsampwidth()),
