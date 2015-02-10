@@ -3,78 +3,116 @@
 
 import os
 import time
-
+from pprint import pprint
+from contextlib import contextmanager
 import peewee
 
-DB_NAME = 'music_data.db'
+DB_NAME = 'playlists.db'
 DB_PATH = os.path.join(os.getcwd(), DB_NAME)
 
-def new(database = DB_PATH,overwrite = False):					
-	#~ print("WE ARE IN",os.getcwd())
-	if overwrite:								# Remove old db
-		try:
-			os.remove(database)
-		except FileNotFoundError:
-			#~ print("failed removal")
-			pass
-	elif os.path.isfile(database):				# if exists and no overwrite return 
-		#~ print("IS FILE")
-		return 0
-		
-	#~ print('CREATING NEW DB')
-	db = peewee.SqliteDatabase(DB_PATH)	
-	db.connect()
-	db.create_tables([Track])
+class FileExistsError(Exception):pass
 	
-db = peewee.SqliteDatabase(DB_PATH)		
-
-def load_track_db(android_db):
-	db = peewee.SqliteDatabase(android_db)
-	class Track(peewee.Model):
-		title = peewee.CharField(null=1)
-		artist = peewee.CharField(null=1) 
-		album = peewee.CharField(null=1)
-		genre = peewee.CharField(null=1)
-		source = peewee.CharField(null=1)  
-		class Meta:
-			database = db
-	return Track
-			 
-class BaseModel(peewee.Model):
-    class Meta:
-        database = db
-        
-class UserData(BaseModel):
-	facebook_name = peewee.CharField(null=1) 
-	phone_name = peewee.CharField(null=1) 
-	fb_music = peewee.CharField(null=1) 
-	hard_drive_music = peewee.CharField(null=1) 
-	spotify_music = peewee.CharField(null=1) 
-
-class PlaylistInfo(BaseModel):
-	creation_date = peewee.CharField(null=1)
-	event_name = peewee.CharField(null=1)
-	playlist_name = peewee.CharField(null=1)
+playlist_db = peewee.SqliteDatabase(DB_PATH)	
+playlist_db.connect() 
+class PlaylistInfo(peewee.Model):
+	'''Playlist name and settings for sorting tacks in the playlist'''
+	name = peewee.CharField(unique=True)
+	creation_date = peewee.CharField()
+	event_name = peewee.CharField(null=1, unique=True)
 	users = peewee.CharField(null=1)	
-	weight_multiple_user = peewee.CharField(null=1)
-	weight_hits_per_user = peewee.CharField(null=1)
-	weight_genre = peewee.CharField(null=1)
-	weight_favourited = peewee.CharField(null=1)
+	scoring_multiple_user = peewee.CharField(null=1)
+	scoring_hits_per_track = peewee.CharField(null=1)
+	scoring_hits_per_album = peewee.CharField(null=1)
+	scoring_profile = peewee.CharField(null=1)
+	scoring_favourited = peewee.CharField(null=1)
+	scoring_discovered = peewee.CharField(null=1)
 	discovery = peewee.BooleanField(null=1)
-	genre = peewee.CharField(null=1)
-	
-class PlaylistTrack(BaseModel):
-	playlist_name = peewee.CharField(null=1)
+	profile = peewee.CharField(null=1)
+	class Meta:
+		database = playlist_db 
+
+def create_blank_db(test=0):
+	'''Called by the deployment script'''
+	if test:
+		playlist_db.close()
+		os.remove(DB_PATH)
+	playlist_db.create_tables([PlaylistInfo])
+  
+class Track(peewee.Model):
+	'''Loads the new tracks that are gotten from users'''
 	title = peewee.CharField(null=1)
-	artist = peewee.CharField(null=1)
+	artist = peewee.CharField(null=1) 
 	album = peewee.CharField(null=1)
 	genre = peewee.CharField(null=1)
+	source = peewee.CharField(null=1)
+	class Meta:
+		database = None
+
+def create_new(database, test=False):					
+	### These get a new db every time, the db name is the playlist name	
+	db = peewee.SqliteDatabase(database)	
+	db.connect()
+	class BaseModel(peewee.Model):
+			class Meta:
+				database = db
 	
-class FinalPlayList(BaseModel):
-	playlist_name = peewee.CharField(null=1)
-	title = peewee.CharField(null=1)
-	artist = peewee.CharField(null=1)
-	weight = peewee.CharField(null=1)
-	discovered = peewee.BooleanField(null=1)
-	genre = peewee.CharField(null=1)
-		
+	class UserData(BaseModel):
+		'''Collection Of User Data and the songs they have asscoated with them'''
+		phone_name = peewee.CharField(unique=1)
+		facebook_name = peewee.CharField(null=1) 
+			
+	class ScoredTrack(BaseModel):
+		'''Users contribution to a song is shown here'''
+		title = peewee.CharField(null=1)
+		artist = peewee.CharField(null=1)
+		album = peewee.CharField(null=1)
+		genre = peewee.CharField(null=1)
+		discovered = peewee.BooleanField(default=0)
+		userscores = peewee.CharField(null=1)
+		multiuser_bonus =  peewee.CharField(null=1)
+		profile_bonus = peewee.CharField(null=1)
+		discovered_bonus = peewee.BooleanField(null=1)
+	class PlayList(BaseModel):
+		'''When the user changes the genre the final points here will just be changed'''
+		playlist_name = peewee.CharField(null=1)
+		title = peewee.CharField(null=1)
+		artist = peewee.CharField(null=1)
+		album = peewee.CharField(null=1)
+		genre = peewee.CharField(null=1)
+		score = peewee.CharField(null=1)
+	if not test:			
+		db.create_tables([UserData, ScoredTrack ,PlayList])
+	else:
+		pass
+		#~ print('Test db recreating..')
+		#~ db.close()
+		#~ os.remove(database)
+		#~ db = peewee.SqliteDatabase(database)
+		#~ db.connect()
+		#~ db.create_tables([UserData, ScoredTrack ,PlayList])
+	return UserData, ScoredTrack ,PlayList
+
+#~ class change_db():			DIDNT WORK zzz, cannot return from init.. wanted to use as a normal and context manager,
+	#~ def __init__(self,orm_class, new_db):	Still dunno how to do it @contextmanager might be able to somethow
+		#~ orm_class._meta.database = db
+		#~ return orm_class
+	#~ def __enter__(self,orm_class, new_db):
+		#~ self.original_db = orm_class._meta.database
+		#~ orm_class._meta.database = db
+		#~ yield orm_class
+	#~ 
+	#~ def __exit__(self,*args):
+		#~ orm_class._meta.database = self.original_db
+@contextmanager
+def changed_db(orm_class, new_db):
+	original_db = orm_class._meta.database
+	NEW_DB = peewee.SqliteDatabase(new_db)
+	NEW_DB.connect()
+	orm_class._meta.database = NEW_DB 
+	yield orm_class
+	#~ orm_class._meta.database = original_db
+        
+
+if __name__ == '__main__':		
+
+	create_blank_db(test=1)

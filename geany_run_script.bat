@@ -1,4 +1,4 @@
-python2 "pynfc_nfx.py"
+python "party_playlist.py"
 
 pause
 del "%0"

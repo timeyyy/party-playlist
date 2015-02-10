@@ -13,7 +13,7 @@ import db_utils
 
 def hard_drive(start_path):
 	'''
-	Recursivley searchs folders and 
+	Recursivley searchs folders and returns instance of Track, orm class
 	'''
 	def get_info(start_path):
 		for root, dirs, files in os.walk(start_path):
@@ -38,3 +38,5 @@ def hard_drive(start_path):
 									source = 'hard_drive - {0}'.format(root))
 		new_track.save()
 		yield new_track 
+
+
