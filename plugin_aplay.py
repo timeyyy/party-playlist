@@ -78,10 +78,12 @@ class MusicPlayer():
 			#~ data = wf.readframes(chunk) 
 		#~ stream.close()
 		#~ p.terminate()
-	
-if __name__ == '__main__':		
+def test()
 	import yaml
 	with open("config.conf", 'r') as ymlfile:
 		CFG = yaml.load(ymlfile)
 	player = MusicPlayer(CFG['aplay']['output_dir'], CFG['aplay']['input_dir'])
-
+	
+	
+if __name__ == '__main__':		
+	pass
