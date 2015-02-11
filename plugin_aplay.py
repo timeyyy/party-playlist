@@ -4,6 +4,7 @@ import _thread as thread
 import subprocess
 import time 
 from glob import glob
+import yaml
 
 from pydub import AudioSegment
 
@@ -79,7 +80,6 @@ class MusicPlayer():
 		#~ stream.close()
 		#~ p.terminate()
 def test()
-	import yaml
 	with open("config.conf", 'r') as ymlfile:
 		CFG = yaml.load(ymlfile)
 	player = MusicPlayer(CFG['aplay']['output_dir'], CFG['aplay']['input_dir'])
