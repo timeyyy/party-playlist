@@ -8,7 +8,7 @@ from pydub import AudioSegment
 MUSIC_DIR = "/home/pi/music"
 FILE = 'waves1.wav'
 FILE_SIZE = os.path.getsize(FILE)
-CHUNK_SIZE = 1024
+CHUNK_SIZE = 2048
 FORMAT = pyaudio.paInt16
 RATE = 44100
 
@@ -24,7 +24,8 @@ def run():
 		print("Transcodeing into wav", file)
 		try:
 			song = AudioSegment.from_mp3(file)
-		except Exception:
+		except Exception as err:
+			print(err)
 			print('Problems happend')
 			continue
 		EXPORT_NAME = "exported.wav"
