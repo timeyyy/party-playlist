@@ -18,25 +18,24 @@ Options:
 	list [name] Either list all playlists or enter the name or id of the playlist to view specifics
 	-t --test	testing mode will create if doesnt exists, and just load if it does
 """
-
 from pprint import pprint
 import time
-try:
-	import _thread as thread
-	import queue
-except ImportError:
-	import thread
-	import Queue as queue
+import yaml
+import _thread as thread
+import queue
+
+from docopt import docopt
+#~ import nxppy
 try:
 	import RPi.GPIO as GPIO
 	GPIO.setmode(GPIO.BCM)
 except ImportError:pass
 
-from docopt import docopt
-
 import func
 import db_utils
-#~ import nxppy
+
+with open("config.conf", 'r') as ymlfile:
+    CFG = yaml.load(ymlfile)
 
 class Party():
 	# Scanning for button Presses
@@ -54,9 +53,12 @@ class Party():
 	def __init__(self, name='test', load=False, timeout=False, profile=False,test=False):
 		#~ self.input_actions = {5:lambda:print(5),7:None,12:None}
 		#self.check_buttons()		# Buttons change the playback mode
-		self.queue = queue.Queue()
+		self.main_queue = queue.Queue()
 		thread.start_new_thread(self.listen_nfc_wifi,())	# Check Server for wifi and for nfc connections
-		self.check_new_files(name,load,timeout,profile,test)
+		self.music_queue = queue.Queue()
+		self.music_player = thread.start_new_thread(self.music_player,())
+		if not CFG['play']:
+			self.check_new_files(name,load,timeout,profile,test)
 	
 	#~ def check_buttons(self):		# Maps Input Pins to different actions
 		#~ prev_input = 0	
@@ -75,31 +77,42 @@ class Party():
 			print('waiting for inputs!!! so press 1 to demo')
 			if input() == '1':
 				print('getting shit')
-				time.sleep(.2)
+				time.sleep(1)
 				print('finished getting!!!')
-				self.queue.put(1)
-				time.sleep(.2)
+				self.main_queue.put(1)
+				time.sleep(1)
 	
 	def check_new_files(self,name,load,timeout,profile,test):
+		''''This blocks our main program'''
 		while 1:
 			try:
-				data = self.queue.get(block=False)
+				data = self.main_queue.get(block=False)
 			except queue.Empty:pass	
 			else:
 				print('doing')
-				func.process_tracks(name,load,timeout,profile,test)
-		
+				func.process_tracks(name,load,timeout,profile,test)	# NEED TO PASS IN DB NOT TAKE ALL IN FOLDER
+				tracks = func.next_tracks(name, 2)	
+				self.music_queue.put(tracks)
+			time.sleep(1)
+	
+	def music_player(self):
+		if CFG['playing']['music_player'] == 'aplay':
+			import plugin_aplay as audio
+			args = (CFG['aplay']['output_dir'], CFG['aplay']['input_dir'])			
+		self.mplayer = audio.MusicPlayer(args)			
+		while 1:
+			try:
+				tracks = self.music_queue.get(block=False)
+			except queue.Empty:pass
+			else:
+				print('playing songs')
+				with audio.add_tracks():
+					pass
+			time.sleep(1)
 	def run_down(self):
-		'''	add all the songs from the database to PlayistTrack
-			
-			parse according to setting and add results to FinalPlayList
-			
-			Play Songs
-		
-		
+		'''		
 		When Genre Changed
 		When A New User Adds Data how to minimze calculations	
-		
 		'''
 		pass
 	
@@ -120,9 +133,9 @@ class Party():
 if __name__ == '__main__':
 	#~ import sys
 	#~ print(sys.argv)
-	#~ args = docopt(__doc__,argv=['new','testing','--test'])
-	args = docopt(__doc__,argv=['load','testing223'])
-	args = docopt(__doc__,argv=['list'])
+	args = docopt(__doc__,argv=['new','testing','--test'])
+	#~ args = docopt(__doc__,argv=['load','testing223'])
+	#~ args = docopt(__doc__,argv=['list'])	
 	#~ print(help(docopt))
 	#~ pprint(args)
 	

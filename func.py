@@ -179,15 +179,26 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 												album=scored_track.album,
 												genre=scored_track.genre,
 												score=score)
-												 
-				
+												 	
 			# PlayList
 			#~ sorted_by_values = sorted(total_points.items(), key=operator.itemgetter(1)) # http://stackoverflow.com/questions/613183/sort-a-python-dictionary-by-value
 			#~ new_playlist = PlayList()
-
+			
+def next_tracks(playlist_db_name, number):
+	'''Returns tracks to be played!'''
+	UserData, ScoredTrack, PlayList = db_utils.setup_orm(playlist_db_name+'.db', create=False, test=False)
+	TRACKS = []
+	for i, track in enumerate(PlayList.select().where(PlayList.name == playlist_db_name).order_by(PlayList.score)):
+		if i == number:
+			break
+		TRACKS.append(track)
+	return TRACKS
 if __name__ == '__main__':
 	#~ test()
 	pass
-
-
+	num = 2
+	for i,num2 in enumerate(list((1,2,3,4))):
+		if i == 2:
+			break
+		print(i)
 

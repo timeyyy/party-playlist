@@ -1,4 +1,4 @@
-python "audio.py"
+python "func.py"
 
 pause
 del "%0"

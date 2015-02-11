@@ -1,10 +1,8 @@
-#~ from __future__ import print_function
-#~ from __future__ import with_statement
-
 import os
 import time
 from pprint import pprint
 from contextlib import contextmanager
+
 import peewee
 
 DB_NAME = 'playlists.db'
@@ -135,6 +133,10 @@ def list_playlists(name=None):
 				print('That playlist doesnot exist...')
 			else:
 				raise err
+
+def mark_track_as_played():
+	pass
+
 if __name__ == '__main__':		
 	list_playlists(1)
 	#~ create_blank_db(test=1)
