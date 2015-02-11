@@ -13,7 +13,7 @@ FORMAT = pyaudio.paInt16
 RATE = 44100
 
 chunk = 1024
-def run():
+def convert():
 	filenames = []						# Get all files in the cwd		#http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python
 	for root, dirs, files in os.walk(MUSIC_DIR):	# add to tims tools for listing files...
 		root_and_files = [os.path.join(root, file) for file in files]
@@ -23,14 +23,16 @@ def run():
 	for file in filenames:
 		print("Transcodeing into wav", file)
 		try:
+			pass
 			song = AudioSegment.from_mp3(file)
 		except Exception as err:
 			print(err)
 			print('Problems happend')
 			continue
-		EXPORT_NAME = "exported.wav"
+		EXPORT_NAME = file.split(os.sep)[-1]
+		#print(EXPORT_NAME)
 		song.export(EXPORT_NAME, format="wav")
-		play(EXPORT_NAME)
+		#play(EXPORT_NAME)
 		
 	
 def play(song):
