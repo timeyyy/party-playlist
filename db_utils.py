@@ -138,5 +138,8 @@ def mark_track_as_played():
 	pass
 
 if __name__ == '__main__':		
-	list_playlists(1)
+	pass
+	#~ list_playlists(1)
 	#~ create_blank_db(test=1)
+	
+	

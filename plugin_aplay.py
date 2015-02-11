@@ -1,30 +1,29 @@
 import os
-from contextlib import contextmanager
-from collections import deque
 import queue
 import _thread as thread
 import subprocess
 import time 
+from glob import glob
 
 from pydub import AudioSegment
 
-MUSIC_DIR = "/home/pi/music"
-FILE = 'waves1.wav'
-FILE_SIZE = os.path.getsize(FILE)
-CHUNK_SIZE = 2048
-FORMAT = pyaudio.paInt16
-RATE = 44100
-
-chunk = 1024
-
 class MusicPlayer():
 	def __init__(self, output_dir, input_dir):
-		self.output_dir = outpud_dir
+		self.output_dir = output_dir
 		self.input_dir = input_dir
-		self.tracks_to_play = deque()
 		self.queue = queue.Queue()
-		thread.start_new_thread(play,())
-		
+		thread.start_new_thread(self.play,())
+		self.dummy()
+	
+	def dummy(self):
+		while 1:
+			print('Waiting for input!')
+			print(self.input_dir)
+			for file in glob(self.input_dir+"/*.wav"):
+				print('putting on the queue',file)
+				self.queue.put(os.path.join(self.input_dir, file))
+			time.sleep(2)
+			
 	def add_tracks(tracks):
 		for track in tracks:
 			self.dl()
@@ -60,10 +59,11 @@ class MusicPlayer():
 				pass
 			else:	
 				print('playing song now!')
-				subprocess.call(['aplay',os.path.join(self.input_dir,track)])
+				print(track)
+				#~ subprocess.call(['aplay',os.path.join(self.input_dir,track)])
+				subprocess.call(['aplay',track])
 				print('Finished playing song ..')
 			time.sleep(1)
-		
 		#~ wf = wave.open(song, 'rb')
 		#~ p = pyaudio.PyAudio()
 		#~ stream = p.open(
@@ -78,3 +78,10 @@ class MusicPlayer():
 			#~ data = wf.readframes(chunk) 
 		#~ stream.close()
 		#~ p.terminate()
+	
+if __name__ == '__main__':		
+	import yaml
+	with open("config.conf", 'r') as ymlfile:
+		CFG = yaml.load(ymlfile)
+	player = MusicPlayer(CFG['aplay']['output_dir'], CFG['aplay']['input_dir'])
+
