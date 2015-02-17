@@ -17,35 +17,41 @@ from pydub import AudioSegment
 #~ cvlc -vvv "http://r3---sn-i5onxoxu-q0nl.googlevideo.com/videoplayback?id=cf086afb3c9a4f85&itag=141&source=youtube&ms=au&pl=23&mv=m&mm=31&ratebypass=yes&mime=audio/mp4&gir=yes&clen=5714575&lmt=1394278914511461&dur=179.211&fexp=900225,907263,912333,927622,933232,9405978,941460,943917,945906,947225,948124,952302,952605,952612,952901,955301,957201,959701&mt=1423697449&sver=3&signature=4313B696B869858D63ACBDE4E3779289468F1AC8.5E601212835696549F8AEFF0926E5D6B6CFFF491&upn=bpqIAmQNwL8&key=dg_yt0&ip=78.48.8.143&ipbits=0&expire=1423719187&sparams=ip,ipbits,expire,id,itag,source,ms,pl,mv,mm,ratebypass,mime,gir,clen,lmt,dur"
 
 class MusicPlayer():
-	def __init__(self, *args, **kwargs):
+	def __init__(self, CFG):
 		self.features = ('stream', 'local', 'http', 'all_formats')
+		self.CFG = CFG
 		#~ self.output_dir = output_dir
 		#~ self.input_dir = input_dir
-		self.vlc_start(args, kwargs)
 		self.track_queue = queue.Queue()
-		self.read_queue()
+		thread.start_new_thread(self.read_queue,())
 
-	def vlc_start(self, *args, **kwargs):
-		mode = kwargs.get('mode')
-		if mode == 'http':
-			pass
-			#http setup code here
-	def http_play():
-		pass
+	def start(self):
+		#~ mode = kwargs.get('mode')
+		port = self.CFG['playing']['port']
+		if not port:
+			port = 1250
+		cmd = 'vlc -I rc --rc-host localhost:' + str(port)
+		return cmd
+		#~ args = subprocess.Popen(cmd, stdout = subprocess.PIPE, stderr= subprocess.PIPE).communicate()
+		#~ print('finished communicatieng',args)
+	
+	def http_play(track):
+		return 'add ' + arg
 		#start playing
-	def http_stop():
+	def http_pause():
+		return 'pause'
 		pass
 	def http_next():
-		pass
+		return 'next'
 	def http_prev():
-		pass
+		return 'prev'
 	
-	def play():pass
-				
-	def add_track(tracks):
-		self.dl()
-		self.convert()
-		self.track_queue.put(track)
+	def http_play():
+		return 'add'
+	def http_add(arg):
+		return 'enque ' + arg
+	def add_track(self, tracks):
+		self.track_queue.put(tracks)
 			
 	def read_queue(self):
 		while 1:
@@ -55,9 +61,8 @@ class MusicPlayer():
 				pass
 			else:	
 				print('playing song now!')
-				print(track)
+				self.http('enque ' + track)
 				#~ subprocess.call(['aplay',os.path.join(self.input_dir,track)])
-				subprocess.call(['aplay',track])
 				print('Finished playing song ..')
 			time.sleep(1)
 
@@ -148,4 +153,6 @@ def dummy(self):
 		time.sleep(1)
 
 if __name__ == '__main__':		
-	test2()
+	with open("config.conf", 'r') as ymlfile:
+		CFG = yaml.load(ymlfile)
+	mplayer = MusicPlayer()

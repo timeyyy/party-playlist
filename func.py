@@ -190,7 +190,8 @@ def next_tracks(playlist_db_name, number):
 		number = 0.1	# will never equal this
 	UserData, ScoredTrack, PlayList = db_utils.setup_orm(playlist_db_name+'.db', create=False, test=False)
 	TRACKS = []
-	for i, track in enumerate(PlayList.select().where(PlayList.name == playlist_db_name).order_by(PlayList.score)):
+	#~ PlayList.playlist_name = ''
+	for i, track in enumerate(PlayList.select().order_by(PlayList.score)):
 		if i == number:
 			break
 		TRACKS.append(track)

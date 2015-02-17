@@ -60,6 +60,7 @@ class Party():
 		self.main_queue = queue.Queue()
 		self.music_queue = queue.Queue()
 		# The user will not need accept new song entires or parsing when in play mode
+		thread.start_new_thread(self.music_player,())
 		if play:
 			if name == None:
 				# USE THE LAST USED PLAYLIST!!
@@ -67,11 +68,12 @@ class Party():
 			tracks = func.next_tracks(name, 2)	
 			self.music_queue.put(tracks)
 			tracks = func.next_tracks(name, 'all')
+			#~ pprint(tracks)
+			print('adding')
 			self.music_queue.put(tracks)
 		else:	
 			thread.start_new_thread(self.listen_nfc_wifi,())	# Check Server for wifi and for nfc connections	
 			thread.start_new_thread(self.waiting_tracks,(name,load,timeout,profile,test))	
-		thread.start_new_thread(self.music_player,())
 		self.waiting_for_input()
 	
 	#~ def check_buttons(self):		# Maps Input Pins to different actions
@@ -126,38 +128,44 @@ class Party():
 			data = input()	
 			if data in ('q', 'c'):
 				pass
-			elif data in ('n', 'play', 'p'):
-				if CFG['playing']['interface'] == 'http':pass
-					#self.music_player.http
-				elif data == 'n':pass
-					#close the music player thread and service
-					#start it again!
-					#give the next tracks
-				elif data == 'p':pass
-					#close the player thread
-					#start it again
-					#give previous track
+			elif data == 'n':
+				self.music_player.http_next()
+			elif data == 'p':
+				self.music_player.http_prev()
+			elif data == 'play':
+				self.music_player.http_play()
+			elif data == 'add':pass
+				#~ self.music_player.add_t
 			time.sleep(1)
 	
 	def music_player(self):
-		'''Setup logic for MusicPlayer, plugin for source
-		and player changed using the config.conf'''
+		'''Setup logic for MusicPlayer'''
 		player = CFG['playing']['music_player']
 		song_source = CFG['playing']['song_source']
 		if player == 'aplay':
 			from plugin.musicplayer import aplay as player
-			args = (CFG['aplay']['output_dir'], CFG['aplay']['input_dir'])			
 		elif player == 'vlc':
 			from plugin.musicplayer import vlc as player
-			args = CFG['vlc']			
 		if song_source == 'youtube':
 			from plugin.songsource import youtube as source 
-		source_args = ('',)
-		self.music_player = player.MusicPlayer(args)			
-		song_source = source.MusicSource(source_args)
+		self.music_player = player.MusicPlayer(CFG)			
+		
+		song_source = source.MusicSource(CFG)
 		self.check_plugin_compatibility(self.music_player, song_source)
+		# Open player and save the pid
+		cmd = self.music_player.start()
+		process = subprocess.Popen(cmd)
+		self.music_player.pid = process.pid
+		
+		if CFG['playing']['interface'] == 'http':
+			def http(arg):
+				print(arg)
+				subprocess.call(['echo', arg, 'nc','localhost', str(CFG['playing']['port']]))
+			self.music_player.http = http   
 		while 1:
+			print('1')
 			try:
+				print('checking the queue')
 				tracks = self.music_queue.get(block=False)
 			except queue.Empty:pass
 			else:
@@ -188,13 +196,23 @@ class Party():
 			raise AttributeError('Player or source with unsupported feautres')
 	
 
-if __name__ == '__main__':
+if __name__ == '__main__':	
+	#~ with open("config.conf", 'r') as ymlfile:
+		#~ CFG = yaml.load(ymlfile)
+	#~ from plugin.musicplayer import vlc
+	#~ mplayer = vlc.MusicPlayer(CFG)
+	#http://stackoverflow.com/questions/21936597/blocking-and-non-blocking-subprocess-calls
+	#~ subprocess.Popen('vlc -I rc --rc-host localhost:1250')
+	#~ time.sleep(3)
+	#~ subprocess.call()
+	print('aa')
 	#~ import sys
 	#~ print(sys.argv)
 	#~ args = docopt(__doc__,argv=['new','testing','--test'])
 	#~ args = docopt(__doc__,argv=['load','testing223'])
 	#~ args = docopt(__doc__,argv=['list'])	
 	args = docopt(__doc__,argv=['play'])	
+	#~ args = docopt(__doc__,argv=['cfg'])	
 	#~ print(help(docopt))
 	#~ pprint(args)
 	

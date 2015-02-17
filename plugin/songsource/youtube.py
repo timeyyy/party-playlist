@@ -14,10 +14,10 @@ yt_key = 'AIzaSyAl1Xq9DwdE_KD4AtPaE4EJl3WZe2zCqg4'
 session = requests.Session()
 
 class MusicSource():
-	def __init__(self):
+	def __init__(self, args):
 		self.features = ('stream',)
 	
-	def load(track):
+	def load(self, track):
 		'''Result it a list of dicts, each list item is a youtube hit,
 		the dict contains the url as well as track info'''
 		result = search_youtube(track.artist + track.title)
@@ -136,7 +136,7 @@ if __name__ == '__main__':
 	
 	
 	#~ logging.debug(os.name)
-	result = search_youtube('say anything no soul')
+	result = search_youtube('coheed and cambria')
 	for i in result:
 		logging.info(i)
 	

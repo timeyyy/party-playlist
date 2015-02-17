@@ -1,0 +1,26 @@
+2015-02-17 22:29:09,795:INFO: Starting new HTTPS connection (1): www.googleapis.com
+2015-02-17 22:29:10,953:DEBUG: "GET /youtube/v3/search?part=id&maxResults=8&videoCategoryId=music&type=video&q=coheed+and+cambria&key=AIzaSyAl1Xq9DwdE_KD4AtPaE4EJl3WZe2zCqg4 HTTP/1.1" 200 1760
+2015-02-17 22:29:11,185:DEBUG: encoding unknown
+2015-02-17 22:29:11,229:DEBUG: Fetched video info
+2015-02-17 22:29:11,235:DEBUG: extracted stream maps
+2015-02-17 22:29:11,236:DEBUG: Fetching dash page
+2015-02-17 22:29:11,350:DEBUG: encoding unknown
+2015-02-17 22:29:11,351:DEBUG: DASH list fetched
+2015-02-17 22:29:11,610:DEBUG: encoding unknown
+2015-02-17 22:29:11,650:DEBUG: Fetched video info
+2015-02-17 22:29:11,655:DEBUG: extracted stream maps
+2015-02-17 22:29:11,655:DEBUG: Fetching dash page
+2015-02-17 22:29:11,744:DEBUG: encoding unknown
+2015-02-17 22:29:11,744:DEBUG: DASH list fetched
+2015-02-17 22:29:11,940:DEBUG: encoding unknown
+2015-02-17 22:29:11,980:DEBUG: Fetched video info
+2015-02-17 22:29:11,987:DEBUG: extracted stream maps
+2015-02-17 22:29:11,988:DEBUG: Fetching dash page
+2015-02-17 22:29:12,078:DEBUG: encoding unknown
+2015-02-17 22:29:12,078:DEBUG: DASH list fetched
+2015-02-17 22:29:12,659:DEBUG: encoding unknown
+2015-02-17 22:29:12,701:DEBUG: Fetched video info
+2015-02-17 22:29:12,707:DEBUG: extracted stream maps
+2015-02-17 22:29:12,708:DEBUG: Fetching dash page
+2015-02-17 22:29:12,828:DEBUG: encoding unknown
+2015-02-17 22:29:12,829:DEBUG: DASH list fetched
