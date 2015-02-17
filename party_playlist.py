@@ -154,7 +154,7 @@ class Party():
 		self.check_plugin_compatibility(self.music_player, song_source)
 		# Open player and save the pid
 		cmd = self.music_player.start()
-		process = subprocess.Popen(cmd)
+		process = subprocess.Popen(cmd, shell=True)
 		self.music_player.pid = process.pid
 		
 		if CFG['playing']['interface'] == 'http':
