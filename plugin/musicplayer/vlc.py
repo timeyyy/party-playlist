@@ -34,7 +34,6 @@ class MusicPlayer():
 		return cmd
 		#~ args = subprocess.Popen(cmd, stdout = subprocess.PIPE, stderr= subprocess.PIPE).communicate()
 		#~ print('finished communicatieng',args)
-	
 	def http_pause(self):
 		return 'pause'
 		pass
