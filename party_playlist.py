@@ -160,8 +160,8 @@ class Party():
 		if CFG['playing']['interface'] == 'http':
 			def http(arg):
 				print(arg)
-				subprocess.call(['echo', arg, 'nc','localhost', str(CFG['playing']['port']]))
-			self.music_player.http = http   
+				subprocess.call(['echo', arg, 'nc','localhost', str(CFG['playing']['port'])])
+			self.music_player.http = http    
 		while 1:
 			print('1')
 			try:
@@ -180,6 +180,7 @@ class Party():
 						#~ for hit_result in hits:
 							# filter out cruddy results!
 						self.music_player.add_track(hits[0])
+						self.music_player.http_play()
 						# save this in the database!
 						TRACKS_NEXT.append(hits[0])
 			time.sleep(1)

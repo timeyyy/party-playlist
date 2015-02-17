@@ -46,8 +46,11 @@ class MusicPlayer():
 	def http_prev():
 		return 'prev'
 	
-	def http_play():
-		return 'add'
+	def http_play(track=None):
+		if not track:
+			return 'play'
+		else:
+			return 'add '+ track
 	def http_add(arg):
 		return 'enque ' + arg
 	def add_track(self, tracks):
