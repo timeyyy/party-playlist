@@ -186,6 +186,8 @@ def process_tracks(playlist_db_name, load=False, arg_timeout=False, arg_profile=
 			
 def next_tracks(playlist_db_name, number):
 	'''Returns tracks to be played!'''
+	if number == 'all':
+		number = 0.1	# will never equal this
 	UserData, ScoredTrack, PlayList = db_utils.setup_orm(playlist_db_name+'.db', create=False, test=False)
 	TRACKS = []
 	for i, track in enumerate(PlayList.select().where(PlayList.name == playlist_db_name).order_by(PlayList.score)):
