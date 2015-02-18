@@ -35,23 +35,20 @@ class MusicPlayer():
 		#~ args = subprocess.Popen(cmd, stdout = subprocess.PIPE, stderr= subprocess.PIPE).communicate()
 		#~ print('finished communicatieng',args)
 	def http_pause(self):
-		return 'pause'
-		pass
+		self.http('pause')
 	def http_next(self):
-		return 'next'
+		self.http('next')
 	def http_prev(self):
-		return 'prev'
-	
+		self.http('prev')
 	def http_play(self, track=None):
 		if track:
-			return 'add '+ track
+			self.http('add '+ track)
 		else:
-			return 'play'
+			self.http('play')
 	def http_add(self, arg):
-		return 'enque ' + arg
+		self.http('enque ' + arg)
 	def add_track(self, tracks):
 		self.track_queue.put(tracks)
-			
 	def read_queue(self):
 		while 1:
 			try:
