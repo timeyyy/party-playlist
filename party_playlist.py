@@ -25,12 +25,13 @@ import _thread as thread
 import queue
 from collections import deque
 import subprocess
-from docopt import docopt
+import os
 #~ import nxppy
 try:
 	import RPi.GPIO as GPIO
 	GPIO.setmode(GPIO.BCM)
 except ImportError:pass
+from docopt import docopt
 
 import func
 import db_utils
@@ -125,14 +126,19 @@ class Party():
 		while 1:
 			print('waiting for inputs!!! so press 1 to demo')
 			data = input()	
+			
+			if data == '1':
+				pass
 			if data in ('q', 'c'):
 				pass
-			elif data == 'n':
+			elif data in ('n', 'next'):
 				self.music_player.http_next()
-			elif data == 'p':
+			elif data == ('p', 'prev'):
 				self.music_player.http_prev()
 			elif data == 'play':
 				self.music_player.http_play()
+			elif data == 'pause':
+				self.music_player.http_pause()
 			elif data == 'add':pass
 				#~ self.music_player.add_t
 			time.sleep(1)
@@ -159,7 +165,10 @@ class Party():
 		if CFG['playing']['interface'] == 'http':
 			def http(arg):
 				port = CFG['playing']['port']
-				cmd = 'echo \"{0}\" | nc localhost {1}'.format(arg,port)
+				if os.name == 'nt':
+					cmd = 'echo \"{0}\" | ncat localhost {1}'.format(arg,port)
+				else:
+					cmd = 'echo \"{0}\" | nc localhost {1}'.format(arg,port)
 				#~ print(cmd)
 				subprocess.Popen(cmd, shell=True)
 			self.music_player.http = http    
