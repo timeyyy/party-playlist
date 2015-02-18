@@ -59,10 +59,10 @@ class MusicPlayer():
 			except queue.Empty:
 				pass
 			else:	
-				print('playing song now!')
+				print('enquing the track now!')
 				self.http('enque ' + track)
 				#~ subprocess.call(['aplay',os.path.join(self.input_dir,track)])
-				print('Finished playing song ..')
+				print('Finished enqueuing ..')
 			time.sleep(1)
 
 def test():

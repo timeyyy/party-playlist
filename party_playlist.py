@@ -65,12 +65,11 @@ class Party():
 			if name == None:
 				# USE THE LAST USED PLAYLIST!!
 				name = 'testing'
-			tracks = func.next_tracks(name, 2)	
+			tracks = func.next_tracks(name, 3)	
 			self.music_queue.put(tracks)
-			tracks = func.next_tracks(name, 'all')
+			#~ tracks = func.next_tracks(name, 'all')
 			#~ pprint(tracks)
-			print('adding')
-			self.music_queue.put(tracks)
+			#~ print('adding')
 		else:	
 			thread.start_new_thread(self.listen_nfc_wifi,())	# Check Server for wifi and for nfc connections	
 			thread.start_new_thread(self.waiting_tracks,(name,load,timeout,profile,test))	
@@ -160,27 +159,31 @@ class Party():
 		if CFG['playing']['interface'] == 'http':
 			def http(arg):
 				port = CFG['playing']['port']
-				cmd = "echo \"{0}\" | nc localhost {1}'.format(arg,port)
-				print(cmd)
-				subprocess.Popen(cmd, shell=True)
+				cmd = 'echo \"{0}\" | nc localhost {1}'.format(arg,port)
+				#~ print(cmd)
+				#~ subprocess.Popen(cmd, shell=True)
 			self.music_player.http = http    
 		while 1:
-			print('1')
+			#~ print('1')
 			try:
-				print('checking the queue')
+				#~ print('checking the queue')
 				tracks = self.music_queue.get(block=False)
 			except queue.Empty:pass
 			else:
-				print('playing songs')
+				print('Tracks Gotten from queue')
 				for track in tracks:
+					print('track title in track',track.title)
 					# if not track path or url in database
+					#~ print('song source is getting track info')
 					hits = song_source.load(track)
+					#~ print('track info gotten!')
 					if type(hits) == str:	# a single argument or arument string (local dir)
 						self.music_player.add_track(hits)
 						TRACKS_NEXT.append(hits)
 					else: 							# a stream item
 						#~ for hit_result in hits:
 							# filter out cruddy results!
+						print('queued a hit')
 						self.music_player.add_track(hits[0])
 						self.music_player.http_play()
 						# save this in the database!
@@ -200,15 +203,6 @@ class Party():
 	
 
 if __name__ == '__main__':	
-	#~ with open("config.conf", 'r') as ymlfile:
-		#~ CFG = yaml.load(ymlfile)
-	#~ from plugin.musicplayer import vlc
-	#~ mplayer = vlc.MusicPlayer(CFG)
-	#http://stackoverflow.com/questions/21936597/blocking-and-non-blocking-subprocess-calls
-	#~ subprocess.Popen('vlc -I rc --rc-host localhost:1250')
-	#~ time.sleep(3)
-	#~ subprocess.call()
-	print('aa')
 	#~ import sys
 	#~ print(sys.argv)
 	#~ args = docopt(__doc__,argv=['new','testing','--test'])
