@@ -159,8 +159,10 @@ class Party():
 		
 		if CFG['playing']['interface'] == 'http':
 			def http(arg):
-				print(arg)
-				subprocess.call(['echo', arg,'|', 'nc','localhost', str(CFG['playing']['port'])])
+				port = CFG['playing']['port']
+				cmd = "echo \"{0}\" | nc localhost {1}'.format(arg,port)
+				print(cmd)
+				subprocess.Popen(cmd, shell=True)
 			self.music_player.http = http    
 		while 1:
 			print('1')
