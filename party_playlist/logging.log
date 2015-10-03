@@ -1,0 +1,58 @@
+2015-02-12 01:00:27,268:INFO: Starting new HTTPS connection (1): www.googleapis.com
+2015-02-12 01:00:28,685:DEBUG: "GET /youtube/v3/search?q=say+anything+no+soul&videoCategoryId=music&part=id&key=AIzaSyAl1Xq9DwdE_KD4AtPaE4EJl3WZe2zCqg4&maxResults=8&type=video HTTP/1.1" 200 1760
+2015-02-12 01:00:28,870:DEBUG: encoding unknown
+2015-02-12 01:00:28,911:DEBUG: Fetched video info
+2015-02-12 01:00:28,915:DEBUG: extracted stream maps
+2015-02-12 01:00:28,916:DEBUG: Fetching dash page
+2015-02-12 01:00:29,029:DEBUG: encoding unknown
+2015-02-12 01:00:29,029:DEBUG: DASH list fetched
+2015-02-12 01:00:29,295:DEBUG: encoding unknown
+2015-02-12 01:00:29,331:DEBUG: Fetched video info
+2015-02-12 01:00:29,334:DEBUG: extracted stream maps
+2015-02-12 01:00:29,334:DEBUG: Fetching dash page
+2015-02-12 01:00:29,477:DEBUG: encoding unknown
+2015-02-12 01:00:29,478:DEBUG: DASH list fetched
+2015-02-12 01:00:29,676:DEBUG: encoding unknown
+2015-02-12 01:00:29,715:DEBUG: Fetched video info
+2015-02-12 01:00:29,719:DEBUG: extracted stream maps
+2015-02-12 01:00:29,720:DEBUG: Fetching dash page
+2015-02-12 01:00:29,834:DEBUG: encoding unknown
+2015-02-12 01:00:29,834:DEBUG: DASH list fetched
+2015-02-12 01:00:30,007:DEBUG: encoding unknown
+2015-02-12 01:00:30,044:DEBUG: Fetched video info
+2015-02-12 01:00:30,047:DEBUG: extracted stream maps
+2015-02-12 01:00:30,048:DEBUG: Fetching dash page
+2015-02-12 01:00:30,217:DEBUG: encoding unknown
+2015-02-12 01:00:30,217:DEBUG: DASH list fetched
+2015-02-12 01:00:30,411:DEBUG: encoding unknown
+2015-02-12 01:00:30,415:DEBUG: Fetched video info
+2015-02-12 01:00:30,417:DEBUG: extracted stream maps
+2015-02-12 01:00:30,418:DEBUG: Fetching dash page
+2015-02-12 01:00:30,532:DEBUG: encoding unknown
+2015-02-12 01:00:30,533:DEBUG: DASH list fetched
+2015-02-12 01:00:30,860:DEBUG: encoding unknown
+2015-02-12 01:00:30,865:DEBUG: Fetched video info
+2015-02-12 01:00:30,868:DEBUG: extracted stream maps
+2015-02-12 01:00:30,869:DEBUG: Fetching dash page
+2015-02-12 01:00:30,987:DEBUG: encoding unknown
+2015-02-12 01:00:30,988:DEBUG: DASH list fetched
+2015-02-12 01:00:31,174:DEBUG: encoding unknown
+2015-02-12 01:00:31,212:DEBUG: Fetched video info
+2015-02-12 01:00:31,215:DEBUG: extracted stream maps
+2015-02-12 01:00:31,216:DEBUG: Fetching dash page
+2015-02-12 01:00:31,328:DEBUG: encoding unknown
+2015-02-12 01:00:31,329:DEBUG: DASH list fetched
+2015-02-12 01:00:31,599:DEBUG: encoding unknown
+2015-02-12 01:00:31,604:DEBUG: Fetched video info
+2015-02-12 01:00:31,609:DEBUG: extracted stream maps
+2015-02-12 01:00:31,609:DEBUG: Fetching dash page
+2015-02-12 01:00:31,724:DEBUG: encoding unknown
+2015-02-12 01:00:31,725:DEBUG: DASH list fetched
+2015-02-12 01:00:31,727:INFO: http://r5---sn-i5onxoxu-q0ne.googlevideo.com/videoplayback?id=3246375d7a4cfb6a&itag=141&source=youtube&mm=31&mv=m&pl=24&ms=au&ratebypass=yes&mime=audio/mp4&gir=yes&clen=5933654&lmt=1384943097849664&dur=248.430&signature=4C2ACA95BD3B41A0BBB763E44B1E42D5F115F971.0F3F86C3988A983F3C030FFF9695BCA5D82A38D8&key=dg_yt0&upn=P368Umlh-24&sver=3&mt=1423699040&fexp=907263,913441,927622,943917,945094,947225,948124,952302,952605,952612,952901,955301,957201,959701&ip=78.48.8.143&ipbits=0&expire=1423720826&sparams=ip,ipbits,expire,id,itag,source,mm,mv,pl,ms,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,728:INFO: http://r2---sn-i5onxoxu-q0ne.googlevideo.com/videoplayback?id=47891d3487021075&itag=141&source=youtube&pl=24&mv=m&ms=au&mm=31&ratebypass=yes&mime=audio/mp4&gir=yes&clen=2501381&lmt=1392579068862100&dur=78.437&key=dg_yt0&sver=3&fexp=907263,927622,934601,943607,943917,947225,948124,952302,952605,952612,952901,955301,957201,959701,962725&mt=1423699040&signature=785904671A214BCA21AEC1C96CB88C2B53BF937F.4391E42D676173D6B52A755FC3E5CC33762EEEE4&upn=wRKd3iW85mI&ip=78.48.8.143&ipbits=0&expire=1423720827&sparams=ip,ipbits,expire,id,itag,source,pl,mv,ms,mm,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,728:INFO: http://r6---sn-i5onxoxu-q0ne.googlevideo.com/videoplayback?id=3931859f7b57f220&itag=141&source=youtube&mv=m&ms=au&mm=31&pl=24&ratebypass=yes&mime=audio/mp4&gir=yes&clen=5093031&lmt=1381274791935495&dur=213.228&key=dg_yt0&sver=3&upn=AKkGbiDuh1U&signature=04EF5F80F12976E45E082DEF7EFC44A30790AC0D.9A9DED53E7B01D6C5817994A9454CB177219613D&fexp=905652,907263,912149,927622,929821,9405612,9405964,9406385,942650,943917,947225,948124,948807,952302,952605,952612,952901,955301,957201,959701&mt=1423699040&ip=78.48.8.143&ipbits=0&expire=1423720827&sparams=ip,ipbits,expire,id,itag,source,mv,ms,mm,pl,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,728:INFO: http://r4---sn-i5onxoxu-q0nl.googlevideo.com/videoplayback?id=9ba2e5c43de7fd7a&itag=141&source=youtube&mm=31&mv=m&ms=au&pl=24&ratebypass=yes&mime=audio/mp4&gir=yes&clen=7643100&lmt=1392313638388152&dur=239.699&fexp=907263,924621,927622,930824,9405612,943917,947225,948124,952302,952605,952612,952901,955301,957201,959701&upn=BmS5gkCy1FE&key=dg_yt0&signature=043B8E056DFD86B822F2D67BC6BAF1E187BD69AE.7B74E9125F34A1DA83A7DB24939E8C64B2135CE6&mt=1423699040&sver=3&ip=78.48.8.143&ipbits=0&expire=1423720827&sparams=ip,ipbits,expire,id,itag,source,mm,mv,ms,pl,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,729:INFO: http://r7---sn-i5onxoxu-q0nl.googlevideo.com/videoplayback?id=5cf7fd46b45598b2&itag=141&source=youtube&mm=31&mv=m&pl=24&ms=au&ratebypass=yes&mime=audio/mp4&gir=yes&clen=1353182&lmt=1380241648328555&dur=56.633&key=dg_yt0&upn=LqDYkH8do2I&fexp=907263,927622,936112,9405643,9405985,9406355,943917,947225,948124,952302,952605,952612,952901,955301,957201,959701&mt=1423699040&signature=67E3CE4E347B9B5C4FBA6F91A913DA4F5B593E22.8EE4F69A2E8431710FB5738C5E582D268F863FB3&sver=3&ip=78.48.8.143&ipbits=0&expire=1423720828&sparams=ip,ipbits,expire,id,itag,source,mm,mv,pl,ms,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,729:INFO: http://r4---sn-i5onxoxu-q0nl.googlevideo.com/videoplayback?id=c50e4dbf8800744b&itag=141&source=youtube&mv=m&ms=au&pl=24&mm=31&ratebypass=yes&mime=audio/mp4&gir=yes&clen=5262752&lmt=1385568423543350&dur=220.334&mt=1423699040&fexp=907263,916942,927622,938638,939100,9406487,943917,947225,948124,952302,952605,952612,952901,955301,957201,959701&sver=3&key=dg_yt0&upn=PneqTZzOXuE&signature=67CAECD444BB5FBB3DC1D1780E8B839C6539AE0F.7B76BFC434985EF53B89C8AD12781CD2DDD44A54&ip=78.48.8.143&ipbits=0&expire=1423720828&sparams=ip,ipbits,expire,id,itag,source,mv,ms,pl,mm,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,729:INFO: http://r4---sn-i5onxoxu-q0nl.googlevideo.com/videoplayback?id=5e8ba68d3cb216e9&itag=141&source=youtube&pl=24&mm=31&mv=m&ms=au&ratebypass=yes&mime=audio/mp4&gir=yes&clen=2428901&lmt=1392913326030251&dur=76.161&upn=no3BQ9tLrmU&signature=6168414CE207B08C580DE53B6E168E24BE498069.0312768B5A661032DF3E32039E34E79E96DFF95B&key=dg_yt0&sver=3&fexp=907263,927622,9406848,943917,947225,948124,952302,952605,952612,952901,955301,957201,959701&mt=1423699040&ip=78.48.8.143&ipbits=0&expire=1423720828&sparams=ip,ipbits,expire,id,itag,source,pl,mm,mv,ms,ratebypass,mime,gir,clen,lmt,dur
+2015-02-12 01:00:31,730:INFO: http://r4---sn-i5onxoxu-q0ne.googlevideo.com/videoplayback?id=54a9c67c9e10e1d9&itag=141&source=youtube&mm=31&mv=m&ms=au&pl=24&ratebypass=yes&mime=audio/mp4&gir=yes&clen=5204441&lmt=1387153249056010&dur=217.896&key=dg_yt0&sver=3&fexp=907263,927622,931382,939945,943917,946008,947225,948124,948601,952302,952605,952612,952901,955301,957201,959701,960604,963700&mt=1423699040&signature=935F825B41D73BDECDF609B0C9500D3538BFF947.2147C486AA64A490652FA8614FA7E217E6208484&upn=_ZCLarNR24A&ip=78.48.8.143&ipbits=0&expire=1423720829&sparams=ip,ipbits,expire,id,itag,source,mm,mv,ms,pl,ratebypass,mime,gir,clen,lmt,dur

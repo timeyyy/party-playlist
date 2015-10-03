@@ -1,0 +1,41 @@
+2015-09-30 13:10:58,585:[1;32mINFO[0m: Kivy v1.7.2
+2015-09-30 13:10:59,292:[1;32mINFO[0m: [Logger      ] Record log in /home/alfa/.kivy/logs/kivy_15-09-30_0.txt
+2015-09-30 13:10:59,260:[1;36mDEBUG[0m: [Audio       ] register SoundGstreamer
+2015-09-30 13:10:59,783:[1;36mDEBUG[0m: [Audio       ] register SoundPygame
+2015-09-30 13:10:59,783:[1;32mINFO[0m: [Audio       ] Providers: audio_gstreamer, audio_pygame (audio_sdl ignored)
+2015-09-30 13:11:00,078:[1;36mDEBUG[0m: [Cache       ] register <kv.image> with limit=None, timeout=60s
+2015-09-30 13:11:00,078:[1;36mDEBUG[0m: [Cache       ] register <kv.atlas> with limit=None, timeout=Nones
+2015-09-30 13:11:00,160:[1;32mINFO[0m: [Image       ] Providers: img_tex, img_dds, img_pygame, img_pil, img_gif 
+2015-09-30 13:11:00,160:[1;36mDEBUG[0m: [Cache       ] register <kv.texture> with limit=1000, timeout=60s
+2015-09-30 13:11:00,161:[1;36mDEBUG[0m: [Cache       ] register <kv.shader> with limit=1000, timeout=3600s
+2015-09-30 13:11:00,225:[1;32mINFO[0m: [Camera      ] Provider: gstreamer
+2015-09-30 13:11:00,270:[1;32mINFO[0m: [Clipboard   ] Provider: pygame
+2015-09-30 13:11:00,304:[1;32mINFO[0m: [Factory     ] 144 symbols loaded
+2015-09-30 13:11:00,327:[1;36mDEBUG[0m: [Cache       ] register <kv.lang> with limit=None, timeout=Nones
+2015-09-30 13:11:00,394:[1;36mDEBUG[0m: [Window      ] Ignored <egl_rpi> (import error)
+2015-09-30 13:11:00,405:[1;32mINFO[0m: [Window      ] Provider: pygame(['window_egl_rpi'] ignored)
+2015-09-30 13:11:00,486:[1;33mWARNING[0m: [WinPygame   ] Video: failed (multisamples=2)
+2015-09-30 13:11:00,486:[1;33mWARNING[0m: [WinPygame   ] trying without antialiasing
+2015-09-30 13:11:00,542:[1;36mDEBUG[0m: [Window      ] Display driver x11
+2015-09-30 13:11:00,543:[1;36mDEBUG[0m: [Window      ] Actual window size: 800x600
+2015-09-30 13:11:00,543:[1;36mDEBUG[0m: [Window      ] Actual color bits r8 g8 b8 a8
+2015-09-30 13:11:00,543:[1;36mDEBUG[0m: [Window      ] Actual depth bits: 24
+2015-09-30 13:11:00,544:[1;36mDEBUG[0m: [Window      ] Actual stencil bits: 8
+2015-09-30 13:11:00,544:[1;36mDEBUG[0m: [Window      ] Actual multisampling samples: 0
+2015-09-30 13:11:00,544:[1;32mINFO[0m: [GL          ] OpenGL version <2.1 Mesa 10.1.3>
+2015-09-30 13:11:00,544:[1;32mINFO[0m: [GL          ] OpenGL vendor <Intel Open Source Technology Center>
+2015-09-30 13:11:00,545:[1;32mINFO[0m: [GL          ] OpenGL renderer <Mesa DRI Intel(R) 965GM x86/MMX/SSE2>
+2015-09-30 13:11:00,545:[1;32mINFO[0m: [GL          ] OpenGL parsed version: 2, 1
+2015-09-30 13:11:00,545:[1;32mINFO[0m: [GL          ] Shading version <1.20>
+2015-09-30 13:11:00,545:[1;32mINFO[0m: [GL          ] Texture max size <8192>
+2015-09-30 13:11:00,545:[1;32mINFO[0m: [GL          ] Texture max units <16>
+2015-09-30 13:11:00,650:[1;36mDEBUG[0m: [Shader      ] Fragment compiled successfully
+2015-09-30 13:11:00,653:[1;36mDEBUG[0m: [Shader      ] Vertex compiled successfully
+2015-09-30 13:11:00,659:[1;36mDEBUG[0m: [ImagePygame ] Load </usr/lib/python2.7/dist-packages/kivy/data/glsl/default.png>
+2015-09-30 13:11:00,663:[1;32mINFO[0m: [Window      ] virtual keyboard not allowed, single mode, not docked
+2015-09-30 13:11:00,715:[1;36mDEBUG[0m: [Spelling    ] Ignored <enchant> (import error)
+2015-09-30 13:11:00,715:[1;31mCRITICAL[0m: [Spelling    ] Unable to find any valuable Spelling provider at all!
+2015-09-30 13:11:00,735:[1;32mINFO[0m: [Text        ] Provider: pygame
+2015-09-30 13:11:00,740:[1;32mINFO[0m: [Video       ] Provider: gstreamer
+2015-09-30 13:11:00,887:[1;32mINFO[0m: [OSC         ] using <multiprocessing> for socket
+2015-09-30 13:11:01,798:DEBUG: get_distro: 'Ubuntu'

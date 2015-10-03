@@ -1,0 +1,4 @@
+2015-10-03 13:34:30,077:DEBUG: System is: Linux-3.13.0-63-generic-i686-with-Ubuntu-14.04-trusty
+2015-10-03 13:34:30,083:DEBUG: Python archetecture is: 32bit
+2015-10-03 13:34:30,083:DEBUG: Machine archetecture is: i686
+2015-10-03 13:34:30,089:DEBUG: ('SELECT "t1"."id", "t1"."name", "t1"."creation_date", "t1"."event_name", "t1"."users", "t1"."scoring_multiple_user", "t1"."scoring_hits_per_track", "t1"."scoring_hits_per_album", "t1"."scoring_profile", "t1"."scoring_favourited", "t1"."scoring_discovered", "t1"."discovery", "t1"."profile" FROM "playlistinfo" AS t1', [])
