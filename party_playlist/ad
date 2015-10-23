@@ -1,0 +1,32 @@
+[1;31mSignature: [0m[0ma[0m[1;33m.[0m[0muac_bypass[0m[1;33m([0m[0mfile[0m[1;33m=[0m[1;32mNone[0m[1;33m,[0m [0mcreate[0m[1;33m=[0m[1;32mFalse[0m[1;33m,[0m [0moverwrite[0m[1;33m=[0m[1;32mFalse[0m[1;33m)[0m[1;33m[0m[0m
+[1;31mDocstring:[0m
+path = uac_bypass(file)
+
+This function will only operate when your program is installed
+check the is_installed function for details
+
+Moves working data to another folder. The idea is to get around
+security and uac on windows vista +
+
+returns cwd on linux, windows returns path with write
+access: C:\ProgramData\appname here
+
+if a file is passed in it will be appended to the path
+
+set create to true to create the file in the programData folder
+
+setting overwrite to True will silently overwrite, otherwise a
+FileExistsError is raised
+
+Setting overwrite to get, will get the file path instead of throwing an error
+
+                                                ---Background----
+If a user is using windows, Read write access is restriced in the
+Program Files directory without prompting for uac.
+
+We create a folder in c:\Program Data\ of the program name and
+save logging data etc there.
+
+This way the program doesnt need admin rights.
+[1;31mFile:      [0m~/Dropbox/programming/apptools/apptools/apptools.py
+[1;31mType:      [0mmethod
