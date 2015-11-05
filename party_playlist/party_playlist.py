@@ -6,8 +6,8 @@ Usage:
     party_playlist.py new <name> [--timeout --profile --test]
     party_playlist.py load <name> [--timeout]
     party_playlist.py play [name] [--profile]
-    party_playlist.py playlist [list | -l] [<name>]
-    party_playlist.py playlist (delete | -d) <name>
+    party_playlist.py collection [list | -l] [<name>]
+    party_playlist.py collection (delete | -d) <name>
     party_playlist.py contribution [list | -l | -n] [<name>]
     party_playlist.py contribution (delete | -d) <name>
     party_playlist.py export <name>
@@ -16,15 +16,14 @@ Usage:
     party_playlist.py [-h | --help]
 
 Options:
-    new <name>  Create a new playlist and start listening for new users
+    new <name>  Create a new collection and start listening for new users
     load <name> Loads a previously created list, use timeout to control how long to set it active
     play [name] Play a playlist, defaults to last played
-    playlist list [name] Either list all playlists or enter the name or id of the playlist to view specifics
-    playlist delete <name>
+    collection list [name] Either list all playlists or enter the name or id of the playlist to view specifics
+    collection delete <name>
     -t --test   testing mode will create if doesnt exists, and just load if it does
     -h --help   Show this screen and exit
 """
-from pprint import pprint
 import time
 import yaml
 import _thread as thread
@@ -34,6 +33,7 @@ import subprocess
 import sys
 import os
 import logging
+from contextlib import suppress
 
 #~ import nxppy
 import apptools
@@ -47,13 +47,15 @@ from docopt import docopt
 try:
     from . import func
     from . import db_utils
-    from . import contribution
-    from . import collection
+    from . import contribution_func
+    from . import collection_func
+    from . import process_tracks
 except SystemError:
     import func
     import db_utils
-    import contribution
-    import collection
+    import contribution_func
+    import collection_func
+    import process_tracks
 
 #user editable config
 with open("config.conf", 'r') as ymlfile:
@@ -127,35 +129,37 @@ class PartyPlaylist(apptools.AppBuilder):
             if args['new']:
                 LOAD = False
             if not args['play']:
-                Party(load=LOAD, name=args['<name>'], timeout=args['--timeout'], profile=args['--profile'], test=args['--test'], **party_args)
+                Party(app=self, load=LOAD, name=args['<name>'], timeout=args['--timeout'], profile=args['--profile'], test=args['--test'], **party_args)
             else:
-                Party(play=True, load=True, name=args['<name>'], timeout=args['--timeout'], profile=args['--profile'], test=args['--test'], **party_args)
+                Party(app=self, play=True, load=True, name=args['<name>'], timeout=args['--timeout'], profile=args['--profile'], test=args['--test'], **party_args)
         elif args['export']:pass
-        elif args['playlist']:
+        elif args['collection']:
             if not args['delete']:
-                if args['<name>'] == '-l' or args['<name>'] == 'list':
-                    collection.list_collection(args['<name>'])
-                else:
-                    collection.list_collection(args['<name>'])
+                # if args['<name>'] == '-l' or args['<name>'] == 'list':
+                collection_func.list_collection(collection_path=self.path_collection, collection=args['<name>'])
+                # else:
+                #     collection_func.list_collection(args['<name>'])
             else:
-                collection.delete_playlist(args['<name>'])
+                collection_func.delete_collection(collection_path=self.path_collection, collection=args['<name>'])
         elif args['contribution']:
             if not args['delete']:
                 if args['<name>'] in ('-l', 'list'):
                     print('listconritbutions')
-                    # collection.list_contributions(args['<name>'])
+                    # collection_func.list_contributions(args['<name>'])
                 elif args['-n']:
                     print('new contribution')
-                    contribution.FindMusic(app=self, device='pc', db_name=args['<name>'])
+                    contribution_func.FindMusic(app=self, device='pc', db_name=args['<name>'])
                 else:
-                    print('listconritbutions')
-                    print(args['<name>'])
-                    # contribution.list_contributions(args['<name>'])
+                    print('listing conritbutions')
+                    #TODO
+                    for contrib in contribution_func.get_contributions(self.path_my_contribution):
+                        print(contrib)
+                    # contribution_func.list_contributions(args['<name>'])
             else:
                 print('del contribution')
-                # contribution.delete_contribution(args['<name>'])
+                # contribution_func.delete_contribution(args['<name>'])
         elif args['cfg']:
-            subprocess.call(['nano','config.conf'])
+            subprocess.call(['vim','config.conf'])
         # elif args['--test']:
         #     contributionk
         else:
@@ -176,9 +180,6 @@ class PartyPlaylist(apptools.AppBuilder):
 
 
 class Party():
-    # Scanning for button Presses
-    # Scanning for input via web interface or app
-    
     # Different Playing modes, either via button press or online config
     # Mode 1 Default, is autonomous, uses the default settings to organize
     # a playlist and play the music,  a genre toggle, and a next button
@@ -191,14 +192,15 @@ class Party():
     # Alot of the options for changing music player etc are saved in a cfg file which can be edited manually
     # or by the program
     
-    def __init__(self, name, load=False, timeout=False, profile=False,test=False, play=False,stdin=True):
+    def __init__(self, app, name, load=False, timeout=False, profile=False,test=False, play=False, stdin=True):
         #~ self.input_actions = {5:lambda:print(5),7:None,12:None}
         #self.check_buttons()       # Buttons change the playback mode
         self.track_queue = queue.Queue()
         self.playlist_queue = queue.Queue()
+        self.app = app
         thread.start_new_thread(self.setup_music_player,())
 
-        self.current_collection = self.get_current_playlist(name)
+        self.current_collection = self.get_current_collection(name)
 
         if play:
             tracks = func.next_tracks(name, 3)
@@ -207,19 +209,20 @@ class Party():
             #~ pprint(tracks)
             #~ print('adding')
         else:
-            print("Party on, lets create a new/load existing playlists")
+            print("Party on, lets create a new/load existing collections")
             # Check Server for wifi and for nfc connections
 
             thread.start_new_thread(self.find_new_tracks,())
             # Run algo on tracks to make/edit the playlist
-            thread.start_new_thread(self.playlist_from_tracks,(name,load,timeout,profile,test))
+            thread.start_new_thread(self.playlist_from_tracks,(self.current_collection,load,timeout,profile))
 
         #handles input commands via commandline/stdin from user, for changing tracks etc
         if stdin:
             self.partyplaylist_input()
 
-    def get_current_playlist(self, name):
+    def get_current_collection(self, name):
         '''returns the last userd playlist if none is given'''
+        #TODO
         if name == None:
             name = 'testing'
             print('Selecting the last used playlist {0}'.format(name))
@@ -242,10 +245,18 @@ class Party():
         # add new track function will copy over the contribution in question,
         # then the contribution will be added to the playlist
         # all i do here is check the playlist/collection for the contribution list
-        print('find new tracks via nfc/wifi todo...')
+        print()
+        print('waiting for new tracks via nfc/wifi')
+        being_worked_on = []
         while 1:
-            contribution.get_contributions(app=self, collection=self.current_collection)
-            time.sleep(0.5)
+            with suppress(TypeError):
+                for new_contribution in contribution_func.get_new_contributions(self.app.path_collection,
+                                                                                self.current_collection):
+                    if new_contribution not in being_worked_on:
+                        print('putting new contribution on queue')
+                        self.track_queue.put(new_contribution)
+                        being_worked_on.append(new_contribution)
+            time.sleep(1)
             #~ print('waiting for inputs!!! so press 1 to demo')
             #~ if input() == '1':
                 #~ print('getting shit')
@@ -264,21 +275,37 @@ class Party():
                 #~ block10bytes = mifare.read_block(10)
                 #~ print('1 : ',block10bytes)
 
-    def playlist_from_tracks(self,name,load,timeout,profile,test):
+
+    def playlist_from_tracks(self, collection, load, timeout, profile):
         '''Runs algo on tracks that are recieved from users
         These tracks then wait on a queue to be played if in play mode'''
-        path_name = os.path,join(self.path_collection, name)
-        collection = collection.create_or_get_collection(path_name, load=load, test=test)
+        collection_func.create_or_get_collection(collection_path=self.app.path_collection,
+                                                              collection=collection,
+                                                              load=load)
+        if not collection:
+            # Already exists
+            sys.exit()
+
         while 1:
             try:
-                contribution = self.track_queue.get(block=False)
-            except queue.Empty:pass 
+                new_contribution = self.track_queue.get(block=False)
+            except queue.Empty:
+                pass
             else:
-                func.process_tracks(self, collection, contribution, load, timeout, profile, test) # func.process_tracks(playlist_info, load, timeout, profile, test) #TODO NEED TO PASS IN DB NOT TAKE ALL IN FOLDER
+                self.process_tracks(self.app.path_collection,
+                                    collection,
+                                    self.app.path_other_contribution,
+                                    new_contribution,
+                                    load,
+                                    timeout,
+                                    profile)
                 # tracks = func.next_tracks(name, 2)
                 # self.playlist_queue.put(tracks)
             time.sleep(0.5)
-    
+
+    def process_tracks(self, *args, **kwargs):
+        process_tracks.process_tracks(*args, **kwargs)
+
     def partyplaylist_input(self):
         '''Blocks, reads commands from stdin and provides a simple api for common actions'''
         # a dict wrapper with one custom method
@@ -302,6 +329,7 @@ class Party():
 
     def setup_music_player(self):
         '''Setup logic for MusicPlayer'''
+        return
         player = CFG['playing']['music_player']
         song_source = CFG['playing']['song_source']
         if player == 'aplay':
