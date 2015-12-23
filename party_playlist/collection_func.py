@@ -41,8 +41,9 @@ def create_or_get_collection(collection_path, collection, load):
             if existing_collection == collection:
                 print()
                 print('Collection already exists')
-                print('Either: --test to ignore, delete the playlist, or use the load command')
+                print('Either delete the playlist, or use the load command')
                 print()
+                # Todo shutdown program here..
                 return
         collection_info = new_collection(collection_path, collection)
         return collection_info
@@ -105,7 +106,8 @@ def list_collection(collection_path, collection=None):
 
 
 def delete_collection(collection_path, collection):
-    '''delete a playlist item either by id or by name'''
+    '''delete a playlist item either by id or by name only the users contributions can be deleted,
+    contribution that have been pushed TODO'''
     try:
         try:
             int(collection)

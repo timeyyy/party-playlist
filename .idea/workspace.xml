@@ -2,687 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde7efcd-f516-4984-bf18-81f819a49fcd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/party_playlist/collection.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/party_playlist/contribution.py" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen-1.27-py2.7.egg-info\PKG-INFO" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen-1.27-py2.7.egg-info\SOURCES.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen-1.27-py2.7.egg-info\dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen-1.27-py2.7.egg-info\installed-files.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen-1.27-py2.7.egg-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\_compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\_constants.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\_file.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\_tags.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\_vorbis.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\aac.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\aiff.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\apev2.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\asf.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\easyid3.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\easymp4.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\flac.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\id3\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\id3\_frames.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\id3\_specs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\id3\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\m4a.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\monkeysaudio.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\mp3.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\mp4\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\mp4\_as_entry.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\mp4\_atom.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\mp4\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\musepack.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\ogg.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\oggflac.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\oggopus.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\oggspeex.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\oggtheora.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\oggvorbis.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\optimfrog.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\trueaudio.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\mutagen\wavpack.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\peewee-2.4.6-py2.7.egg-info\PKG-INFO" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\peewee-2.4.6-py2.7.egg-info\SOURCES.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\peewee-2.4.6-py2.7.egg-info\dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\peewee-2.4.6-py2.7.egg-info\installed-files.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\peewee-2.4.6-py2.7.egg-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\peewee.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\apsw_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\berkeley_build.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\berkeleydb.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\csv_loader.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\csv_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\db_url.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\djpeewee.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\gfk.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\kv.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\migrate.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\pool.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\postgres_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\proxy.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\read_slave.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\reflection.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\shortcuts.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\signals.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\sqlcipher_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\sqlite_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\playhouse\test_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\_applibs\pwiz.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\db_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\func.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\gui_main.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\img\icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\img\preslash.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\img\presplash.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\make.bat" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\_static\default.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\_static\filebrowser.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\_static\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\_templates\layout.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\api.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\conf.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\doc\source\index.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\libs\garden\garden.filebrowser\filebrowser.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\main.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\musiclist.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\partyplaylist.kv" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\android\app\sitecustomize.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen-1.27-py2.7.egg-info\PKG-INFO" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen-1.27-py2.7.egg-info\SOURCES.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen-1.27-py2.7.egg-info\dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen-1.27-py2.7.egg-info\installed-files.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen-1.27-py2.7.egg-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\_compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\_constants.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\_file.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\_tags.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\_vorbis.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\aac.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\aiff.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\apev2.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\asf.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\easyid3.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\easymp4.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\flac.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\id3\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\id3\_frames.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\id3\_specs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\id3\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\m4a.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\monkeysaudio.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\mp3.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\mp4\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\mp4\_as_entry.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\mp4\_atom.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\mp4\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\musepack.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\ogg.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\oggflac.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\oggopus.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\oggspeex.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\oggtheora.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\oggvorbis.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\optimfrog.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\trueaudio.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\mutagen\wavpack.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\peewee-2.4.6-py2.7.egg-info\PKG-INFO" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\peewee-2.4.6-py2.7.egg-info\SOURCES.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\peewee-2.4.6-py2.7.egg-info\dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\peewee-2.4.6-py2.7.egg-info\installed-files.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\peewee-2.4.6-py2.7.egg-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\peewee.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\apsw_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\berkeley_build.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\berkeleydb.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\csv_loader.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\csv_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\db_url.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\djpeewee.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\gfk.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\kv.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\migrate.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\pool.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\postgres_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\proxy.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\read_slave.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\reflection.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\shortcuts.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\signals.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\sqlcipher_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\sqlite_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\playhouse\test_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\applibs\pwiz.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\make.bat" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\_static\default.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\_static\filebrowser.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\_static\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\_templates\layout.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\api.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\conf.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\doc\source\index.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\libs\garden\garden.filebrowser\filebrowser.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\state.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\activate" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\activate.csh" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\activate.fish" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\activate_this.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\easy_install" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\easy_install-2.7" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\garden" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\garden.bat" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\pip" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\pip2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\pip2.7" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\python" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\python2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\bin\python2.7" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\include\python2.7" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\UserDict.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\_abcoll.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\_weakrefset.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\abc.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\codecs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\copy_reg.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\distutils\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\distutils\distutils.cfg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\encodings" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\fnmatch.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\genericpath.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\lib-dynload" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\linecache.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\locale.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\no-global-site-packages.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\ntpath.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\orig-prefix.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\os.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\posixpath.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\re.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\Kivy_Garden-0.1.1-py2.7.egg-info\PKG-INFO" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\Kivy_Garden-0.1.1-py2.7.egg-info\SOURCES.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\Kivy_Garden-0.1.1-py2.7.egg-info\dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\Kivy_Garden-0.1.1-py2.7.egg-info\installed-files.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\Kivy_Garden-0.1.1-py2.7.egg-info\requires.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\Kivy_Garden-0.1.1-py2.7.egg-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\_markerlib\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\_markerlib\markers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\easy_install.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\garden\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\METADATA" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\RECORD" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\entry_points.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\pbr.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip-6.0.7.dist-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\__main__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\_markerlib\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\_markerlib\markers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\adapter.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\cache.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\caches\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\caches\file_cache.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\caches\redis_cache.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\controller.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\filewrapper.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\heuristics.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\serialize.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\cachecontrol\wrapper.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\certifi\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\certifi\__main__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\certifi\cacert.pem" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\certifi\core.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\colorama\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\colorama\ansi.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\colorama\ansitowin32.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\colorama\initialise.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\colorama\win32.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\colorama\winterm.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\_backport\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\_backport\misc.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\_backport\shutil.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\_backport\sysconfig.cfg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\_backport\sysconfig.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\_backport\tarfile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\database.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\index.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\locators.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\manifest.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\markers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\metadata.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\resources.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\scripts.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\t32.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\t64.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\version.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\w32.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\w64.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\distlib\wheel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\constants.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\_base.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\alphabeticalattributes.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\inject_meta_charset.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\lint.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\optionaltags.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\sanitizer.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\filters\whitespace.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\html5parser.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\ihatexml.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\inputstream.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\sanitizer.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\serializer\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\serializer\htmlserializer.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\tokenizer.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treeadapters\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treeadapters\sax.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treebuilders\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treebuilders\_base.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treebuilders\dom.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treebuilders\etree.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treebuilders\etree_lxml.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\_base.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\dom.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\etree.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\genshistream.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\lxmletree.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\treewalkers\pulldom.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\trie\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\trie\_base.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\trie\datrie.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\trie\py.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\html5lib\utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\ipaddress.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\lockfile\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\lockfile\linklockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\lockfile\mkdirlockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\lockfile\pidlockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\lockfile\sqlitelockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\lockfile\symlinklockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\packaging\__about__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\packaging\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\packaging\_compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\packaging\_structures.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\packaging\specifiers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\packaging\version.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\pkg_resources\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\progress\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\progress\bar.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\progress\counter.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\progress\helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\progress\spinner.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\re-vendor.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\adapters.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\api.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\auth.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\cacert.pem" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\certs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\cookies.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\hooks.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\models.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\big5freq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\big5prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\chardetect.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\chardistribution.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\charsetgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\charsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\codingstatemachine.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\constants.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\cp949prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\escprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\escsm.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\eucjpprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\euckrfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\euckrprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\euctwfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\euctwprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\gb2312freq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\gb2312prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\hebrewprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\jisfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\jpcntx.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\langbulgarianmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\langcyrillicmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\langgreekmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\langhebrewmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\langhungarianmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\langthaimodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\latin1prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\mbcharsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\mbcsgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\mbcssm.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\sbcharsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\sbcsgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\sjisprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\universaldetector.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\chardet\utf8prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\_collections.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\connection.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\connectionpool.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\contrib\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\contrib\ntlmpool.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\contrib\pyopenssl.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\fields.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\filepost.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\packages\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\packages\ordered_dict.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\packages\six.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\packages\ssl_match_hostname\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\packages\ssl_match_hostname\_implementation.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\poolmanager.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\request.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\response.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\connection.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\request.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\response.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\retry.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\ssl_.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\timeout.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\packages\urllib3\util\url.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\sessions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\status_codes.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\structures.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\requests\utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\_vendor\six.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\basecommand.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\baseparser.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\cmdoptions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\completion.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\freeze.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\help.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\install.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\list.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\search.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\show.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\uninstall.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\unzip.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\wheel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\commands\zip.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\compat\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\compat\dictconfig.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\download.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\index.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\locations.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\models\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\models\index.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\operations\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\operations\freeze.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\pep425tags.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\req\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\req\req_file.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\req\req_install.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\req\req_requirement.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\req\req_set.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\req\req_uninstall.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\status_codes.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\appdirs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\build.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\deprecation.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\filesystem.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\logging.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\outdated.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\utils\ui.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\vcs\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\vcs\bazaar.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\vcs\git.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\vcs\mercurial.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\vcs\subversion.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pip\wheel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\packaging\__about__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\packaging\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\packaging\_compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\packaging\_structures.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\packaging\specifiers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\_vendor\packaging\version.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\tests\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\tests\test_pkg_resources.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\pkg_resources\tests\test_resources.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests-2.5.1.dist-info\DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests-2.5.1.dist-info\METADATA" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests-2.5.1.dist-info\RECORD" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests-2.5.1.dist-info\WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests-2.5.1.dist-info\metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests-2.5.1.dist-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\adapters.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\api.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\auth.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\cacert.pem" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\certs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\cookies.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\hooks.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\models.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\big5freq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\big5prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\chardetect.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\chardistribution.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\charsetgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\charsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\codingstatemachine.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\constants.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\cp949prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\escprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\escsm.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\eucjpprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\euckrfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\euckrprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\euctwfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\euctwprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\gb2312freq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\gb2312prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\hebrewprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\jisfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\jpcntx.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\langbulgarianmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\langcyrillicmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\langgreekmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\langhebrewmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\langhungarianmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\langthaimodel.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\latin1prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\mbcharsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\mbcsgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\mbcssm.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\sbcharsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\sbcsgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\sjisprober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\universaldetector.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\chardet\utf8prober.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\_collections.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\connection.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\connectionpool.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\contrib\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\contrib\ntlmpool.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\contrib\pyopenssl.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\fields.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\filepost.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\packages\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\packages\ordered_dict.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\packages\six.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\packages\ssl_match_hostname\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\packages\ssl_match_hostname\_implementation.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\poolmanager.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\request.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\response.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\connection.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\request.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\response.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\retry.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\ssl_.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\timeout.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\packages\urllib3\util\url.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\sessions.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\status_codes.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\structures.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\requests\utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\METADATA" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\RECORD" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\entry_points.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools-12.0.5.dist-info\zip-safe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\archive_util.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\cli-32.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\cli-64.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\cli-arm-32.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\cli.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\alias.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\bdist_egg.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\bdist_rpm.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\bdist_wininst.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\build_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\build_py.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\develop.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\easy_install.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\egg_info.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\install.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\install_egg_info.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\install_lib.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\install_scripts.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\launcher manifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\register.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\rotate.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\saveopts.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\sdist.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\setopt.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\test.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\command\upload_docs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\depends.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\dist.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\extension.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\gui-32.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\gui-64.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\gui-arm-32.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\gui.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\lib2to3_ex.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\msvc9_support.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\package_index.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\py26compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\py27compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\py31compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\sandbox.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\script (dev).tmpl" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\script.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\site-patch.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\ssl_support.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\contexts.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\environment.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\fixtures.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\py26compat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\script-with-bom.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\server.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_bdist_egg.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_build_ext.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_develop.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_dist_info.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_easy_install.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_egg_info.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_find_packages.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_integration.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_markerlib.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_msvc9compiler.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_packageindex.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_sandbox.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_sdist.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_test.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_upload_docs.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\test_windows_wrappers.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\tests\textwrap.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\unicode_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\version.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site-packages\setuptools\windows_support.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\site.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\sre.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\sre_compile.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\sre_constants.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\sre_parse.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\stat.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\types.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\lib\python2.7\warnings.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\local\bin" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\local\include" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\local\lib" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\.buildozer\venv\pip-selfcheck.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\bin\PartyPlaylist-1.0.0-debug.apk" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\bin\PartyPlaylist-1.2.0-debug.apk" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\buildozer.spec" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\db_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\func.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\geany_run_script.bat" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\gui_main.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\img\icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\img\preslash.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\img\presplash.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\main.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\musiclist.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\android\partyplaylist.kv" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\logging.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\new_track_info\newtracks-tim.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\party_playlist\playlists.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\timeyyy\Dropbox\programming\pi-music\party_playlist\playlists.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/mine/Fri, 16 Oct 2015 18-32-44.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/mine/Fri, 16 Oct 2015 21-19-11.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/mine/Fri, 16 Oct 2015 21-19-30.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/mine/test_contribution_XD.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/other/t.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/other/test_contribution_XD.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/appdata/contribution/mine/Fri, 16 Oct 2015 18-31-16.db" afterPath="$PROJECT_DIR$/party_playlist/appdata/contribution/mine/Fri, 16 Oct 2015 18-31-16.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/plugin/musicplayer/__init__.py" afterPath="$PROJECT_DIR$/party_playlist/plugin/musicplayer/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/collection_func.py" afterPath="$PROJECT_DIR$/party_playlist/collection_func.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/contribution_func.py" afterPath="$PROJECT_DIR$/party_playlist/contribution_func.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/db_utils.py" afterPath="$PROJECT_DIR$/party_playlist/db_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/func.py" afterPath="$PROJECT_DIR$/party_playlist/func.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/latest.log" afterPath="$PROJECT_DIR$/party_playlist/latest.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/party-playlist.iml" afterPath="$PROJECT_DIR$/.idea/party-playlist.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/party_playlist.py" afterPath="$PROJECT_DIR$/party_playlist/party_playlist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/process_tracks.py" afterPath="$PROJECT_DIR$/party_playlist/process_tracks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/tests/test_party_playlist.py" afterPath="$PROJECT_DIR$/party_playlist/tests/test_party_playlist.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/plugin/musicplayer/vlc.py" afterPath="$PROJECT_DIR$/party_playlist/plugin/musicplayer/vlc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/party_playlist/plugin/songsource/youtube.py" afterPath="$PROJECT_DIR$/party_playlist/plugin/songsource/youtube.py" />
     </list>
     <ignored path="party-playlist.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -707,19 +44,17 @@
         <entry file="file://$PROJECT_DIR$/party_playlist/tests/test_party_playlist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+              <caret line="345" column="34" selection-start-line="345" selection-start-column="34" selection-end-line="345" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="party_playlist.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="party_playlist.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/party_playlist/party_playlist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="273" column="40" selection-start-line="273" selection-start-column="40" selection-end-line="273" selection-end-column="40" />
+              <caret line="273" column="38" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -735,31 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="func.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="func.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/party_playlist/func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/party_playlist/collection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contribution.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/party_playlist/contribution.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.51263">
+              <caret line="116" column="69" selection-start-line="116" selection-start-column="69" selection-end-line="116" selection-end-column="69" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -786,9 +101,9 @@
         <option value="$PROJECT_DIR$/party_playlist/db_utils.py" />
         <option value="$PROJECT_DIR$/party_playlist/tests/test_party_playlist.py" />
         <option value="$PROJECT_DIR$/party_playlist/contribution.py" />
-        <option value="$PROJECT_DIR$/party_playlist/func.py" />
         <option value="$PROJECT_DIR$/party_playlist/collection.py" />
         <option value="$PROJECT_DIR$/party_playlist/party_playlist.py" />
+        <option value="$PROJECT_DIR$/party_playlist/func.py" />
       </list>
     </option>
   </component>
@@ -796,10 +111,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="24" />
+    <option name="width" value="1280" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -970,27 +284,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="24" width="1280" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1009,6 +323,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/party_playlist/tests/test_party_playlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/party_playlist/party_playlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/party_playlist/db_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/party_playlist/func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/party_playlist/db_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1021,15 +369,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/party_playlist/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,7 +387,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="240" column="16" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,9 +397,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,7 +421,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,9 +431,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,7 +455,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,9 +465,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,7 +489,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,9 +499,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,7 +523,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1189,9 +533,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="77" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,7 +557,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,9 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,7 +598,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,9 +608,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,7 +639,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,9 +649,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1330,9 +672,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../apptools/apptools/apptools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="394" column="26" selection-start-line="394" selection-start-column="26" selection-end-line="394" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/party-playlist.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1390,25 +723,7 @@
     <entry file="file://$PROJECT_DIR$/party_playlist/tests/test_party_playlist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/party_playlist/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/party_playlist/func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="345" column="34" selection-start-line="345" selection-start-column="34" selection-end-line="345" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1416,15 +731,15 @@
     <entry file="file://$PROJECT_DIR$/party_playlist/party_playlist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="273" column="40" selection-start-line="273" selection-start-column="40" selection-end-line="273" selection-end-column="40" />
+          <caret line="273" column="38" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/party_playlist/contribution.py">
+    <entry file="file://$PROJECT_DIR$/party_playlist/func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.51263">
+          <caret line="116" column="69" selection-start-line="116" selection-start-column="69" selection-end-line="116" selection-end-column="69" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

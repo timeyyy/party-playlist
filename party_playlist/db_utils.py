@@ -68,11 +68,11 @@ class Playlist(Collection):
     '''When the user changes the genre the final points here will just be changed
     this is build up continuosly as the songs are added'''
     playlist_name = peewee.CharField(null=1)
-    title = peewee.CharField(null=1)
+    title = peewee.CharField()
     artist = peewee.CharField(null=1)
     album = peewee.CharField(null=1)
     genre = peewee.CharField(null=1)
-    score = peewee.CharField(null=1)
+    score = peewee.CharField(1)
     times_played = peewee.CharField()
 
 

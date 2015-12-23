@@ -28,14 +28,19 @@ class FindMusic():
         if not db_name:
             db_name = strftime("%a, %d %b %Y %H-%M-%S.db", gmtime())
         db_path_name = os.path.join(self.app.path_my_contribution, db_name)
-        with db_utils.connected_db(db_utils.UserContribution, db_path_name) as db:
-            # with suppress(peewee.OperationalError):
-            db.create_table(db_utils.UserContribution)
+        try:
+            with db_utils.connected_db(db_utils.UserContribution, db_path_name) as db:
+                # with suppress(peewee.OperationalError):
+                db.create_table(db_utils.UserContribution)
+        except peewee.OperationalError:
+            print('The contribution: {0} already exists'.format(db_name))
+            return
+
         with db_utils.connected_db(db_utils.UserData, db_path_name) as db:
             # with suppress(peewee.OperationalError):
             db.create_table(db_utils.UserData)
             db_utils.UserData.create(unique_name=self.get_unique_name())
-        return db_path_name+'.db'
+        return db_path_name
 
     @staticmethod
     def get_unique_name():
@@ -87,7 +92,6 @@ class FindMusic():
                         del paths[index]
 
             if default_paths:
-                return
                 add_default_paths()
                 self._folders(*def_paths)
             if paths:
@@ -109,14 +113,14 @@ class FindMusic():
                         self.add(song_info, source='hard_disk')
 
     def facebook(self):
-        self.add(song_path=root_and_files, source='facebook')
+        pass
+
     def youtube(self):pass
     def playlists(self):pass
     def soundcloud(self):pass
     def lastfm(self):pass
     def pandora(self):pass
     def rdio(self):pass
-
 
 def push_contribution(my_contribution_path, contribution, output_path, collection_path, collection, push_method):
     '''push contribution to another device over wifi or nfc, or test for copy'''
@@ -161,6 +165,32 @@ def get_new_contributions(collection_path, collection):
         if user not in existing_users:
             yield user_contributions[i]
 
+def list_contribution(contribution_path, contribution=None):
+    print()
+    if not contribution:
+        print('All Contributions.. (use the id value for getting more info or deleting)')
+        for i, existing_contribution in enumerate(get_contributions(contribution_path)):
+            print(i, existing_contribution)
+        print()
+    else:
+        try:
+            try:
+                int(contribution)
+                for i, existing_contribution in enumerate(get_contributions(contribution_path)):
+                    if i == int(contribution):
+                        with db_utils.connected_db(db_utils.UserData, os.path.join(contribution_path, existing_contribution)):
+                            userdata = db_utils.UserData.get()
+            except ValueError:
+                    userdata = db_utils.UserData.get()
+            print('Data for Contribution :: ', contribution)
+            print()
+            for key, value in userdata._data.items():
+                print(key,':    ',value)
+        except Exception as err:
+            if 'DoesNotExist' in str(err.__class__):
+                print('That contribution does not exist...')
+            else:
+                raise err
 
 def delete_contribution(contribution_path, contribution):
     '''delete a playlist item either by id or by name'''

@@ -26,32 +26,27 @@ if os.path.isdir('songs'):
 else:
     SONG_FOLDER = os.path.join(os.getcwd(), 'tests', 'songs')
 
+def vacuum():
+    party = PartyPlaylistForTesting()
+    with db_utils.LOCK:
+        try:
+            with suppress(FileNotFoundError):
+                collection_func.delete_collection(party.path_collection, TEST_COLLECTION)
+            with suppress(FileNotFoundError):
+                contribution_func.delete_contribution(party.path_my_contribution, TEST_CONTRIBUTION)
+            with suppress(FileNotFoundError):
+                contribution_func.delete_contribution(party.path_other_contribution, TEST_CONTRIBUTION)
+            with suppress(FileNotFoundError):
+                contribution_func.delete_contribution(party.path_my_contribution, TEST_CONTRIBUTION2)
+            with suppress(FileNotFoundError):
+                contribution_func.delete_contribution(party.path_other_contribution, TEST_CONTRIBUTION2)
+        except PermissionError:
+            time.sleep(1)
+
 def setup_function(func):
-    party = PartyPlaylistForTesting()
-    with suppress(FileNotFoundError):
-        collection_func.delete_collection(party.path_collection, TEST_COLLECTION)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_my_contribution, TEST_CONTRIBUTION)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_other_contribution, TEST_CONTRIBUTION)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_my_contribution, TEST_CONTRIBUTION2)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_other_contribution, TEST_CONTRIBUTION2)
-
-def teardown_function(func):
-    party = PartyPlaylistForTesting()
-    with suppress(FileNotFoundError):
-        collection_func.delete_collection(party.path_collection, TEST_COLLECTION)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_my_contribution, TEST_CONTRIBUTION)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_other_contribution, TEST_CONTRIBUTION)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_my_contribution, TEST_CONTRIBUTION2)
-    with suppress(FileNotFoundError):
-        contribution_func.delete_contribution(party.path_other_contribution, TEST_CONTRIBUTION2)
-
+    vacuum()
+def teardown_function(func=None):
+    vacuum()
 
 class MockFinder(contribution_func.FindMusic):
     def __init__(self, user, **kwargs):
@@ -63,21 +58,18 @@ class MockFinder(contribution_func.FindMusic):
 
 class PartyPlaylistForTesting(PartyPlaylist):
     # Todo, need to make this even more mocklike!, failures in threads shouldnt fuck up my stuff..
-
     class PartyMock(Party):
         def __init__(self, app):
+            def ass(*args, **kwargs):
+                pass
             if 'find_new_tracks' in app.mask_out:
-                def find_new_tracks(*args, **kwargs):
-                    pass
-                self.find_new_tracks = find_new_tracks
+                self.find_new_tracks = ass
             if 'playlist_from_tracks' in app.mask_out:
-                def playlist_from_tracks(*args, **kwargs):
-                    pass
-                self.playlist_from_tracks = playlist_from_tracks
+                self.playlist_from_tracks = ass
             if 'process_tracks' in app.mask_out:
-                def process_tracks(*args, **kwargs):
-                    pass
-                self.process_tracks = process_tracks
+                self.process_tracks = ass
+            if 'setup_music_player' in app.mask_out:
+                self.setup_music_player = ass
 
             Party.__init__(self, app=app, name=TEST_COLLECTION, **app.party_args)
 
@@ -124,7 +116,7 @@ def test_create_or_get_collection():
 
 def test_new_command_creates_new_collection():
     '''testing the command as if it was input from commandline'''
-    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', stdin=False)
+    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', 'setup_music_player', stdin=False)
     party.start()
     for collection in collection_func.get_collections(party.path_collection):
         if collection == TEST_COLLECTION:
@@ -136,7 +128,7 @@ def test_new_command_creates_new_collection():
 @pytest.mark.xfail
 def test_delete_command_deletes_playlist():
     '''testing the command as if it was input from commandline'''
-    party = PartyPlaylistForTesting(stdin=False)
+    party = PartyPlaylistForTesting('setup_music_player', stdin=False)
     for collection in collection_func.get_collections(party.path_collection):
         if collection == TEST_COLLECTION:
             break
@@ -147,7 +139,7 @@ def test_delete_command_deletes_playlist():
 def test_finder_folders():
     '''we test that we can add/remove paths from the finder and that a song gets found and added to the database
     correctly'''
-    party = PartyPlaylistForTesting(stdin=False)
+    party = PartyPlaylistForTesting('setup_music_player', stdin=False)
     finder = MockFinder(TEST_USER, app=party, device='pc', db_name=TEST_CONTRIBUTION)
     finder.folders(paths=[SONG_FOLDER], default_paths=False)
 
@@ -163,7 +155,7 @@ def test_finder_folders():
 def test_pushing_contribution_to_collection_and_also_getting_contribution():
     '''we mute out all the detection and queue effects, we test pushing, and getting and the effects that they should have'''
     # make our new collection
-    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', stdin=False)
+    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', 'setup_music_player', stdin=False)
     party.start()
 
     # make our contribution
@@ -218,7 +210,7 @@ def test_pushing_contribution_to_collection_and_also_getting_contribution():
 #TODO make sure pushing works for multiple...
 
 def test_process_tracks():
-    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', stdin=False)
+    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', 'setup_music_player', stdin=False)
     party.start()
 
     # make our contribution
@@ -253,6 +245,7 @@ def test_process_tracks():
         our_score = json.loads(song.userscores)[TEST_USER]
         assert our_score == cfg['scoring']['hits_per_track']
 
+        import pdb;pdb.set_trace()
         track = db_utils.Playlist.get(db_utils.Playlist.title == 'test_title')
         assert int(track.score) == cfg['scoring']['hits_per_track'] + cfg['scoring']['multiple_user']
 
@@ -291,9 +284,8 @@ def test_process_tracks():
         assert int(track.score) == (cfg['scoring']['hits_per_track'] + cfg['scoring']['multiple_user']) * 2
 
 
-
 def test_tracks_on_queue_get_made_into_playlist():
-    party = PartyPlaylistForTesting(stdin=False)
+    party = PartyPlaylistForTesting('setup_music_player', stdin=False)
     party.start()
 
     # make our contribution
@@ -309,19 +301,31 @@ def test_tracks_on_queue_get_made_into_playlist():
                                         push_method='test')
 
     # gotta wait till threads do the stuff!
-    time.sleep(10)
+    time.sleep(3)
+    with party.BUSY:
+        with db_utils.connected_collection(os.path.join(party.path_collection, TEST_COLLECTION)):
+            song = db_utils.ScoredTrack.get(db_utils.ScoredTrack.title=='test_title')
+            assert song.title == 'test_title'
+            assert song.album == 'test_album'
+            assert song.artist == 'test_artist'
+            assert song.genre == 'test_genre'
 
-    with db_utils.connected_collection(os.path.join(party.path_collection, TEST_COLLECTION)):
-        song = db_utils.ScoredTrack.get(db_utils.ScoredTrack.title=='test_title')
-        assert song.title == 'test_title'
-        assert song.album == 'test_album'
-        assert song.artist == 'test_artist'
-        assert song.genre == 'test_genre'
-
-
+@pytest.mark.a
 def test_vlc_player():
-    pass
+    party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', stdin=False)
+    party.user_cfg['playling']['player'] = 'vlc'
 
+    # from plugin.musicplayer.vlc import MusicPlayer
+    # cfg = func.get_config()
+    # player = MusicPlayer(cfg)
+    # player.launch()
+    #
+    # cmd = self.music_player.start()
+    # process = subprocess.Popen(cmd, shell=True)
+    # self.music_player.pid = process.pid
+
+
+'''
 def test_music_source_youtube():
     pass
 
@@ -330,11 +334,12 @@ def test_songs_get_found_from_nfc():
 
 def test_songs_get_found_from_wifi():
     pass
-
-@pytest.mark.a
+'''
+#TODO incomplete
+@pytest.mark.xfail
 def test_make_songs_and_new_playlist_and_play():
     # New collection
-    party = PartyPlaylistForTesting(stdin=False)
+    party = PartyPlaylistForTesting('setup_music_player', stdin=False)
     party.start()
 
     # make our contribution
@@ -354,7 +359,6 @@ def test_make_songs_and_new_playlist_and_play():
     # TODO make it play music even when creating new...
     # TODo Tests for the player...
     time.sleep(50)
-    import pdb;pdb.set_trace()
 
 
 
