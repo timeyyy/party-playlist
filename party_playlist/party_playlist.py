@@ -1,6 +1,3 @@
-#~ from __future__ import print_function
-#~ from __future__ import with_statement
-#http://docopt.org/
 __doc__ ="""Party Playlist
 Usage:
     party_playlist.py load [<name>]
@@ -37,7 +34,7 @@ from pprint import pprint
 
 #~ import nxppy
 import peewee
-import apptools
+import peasoup
 
 try:
     import RPi.GPIO as GPIO
@@ -69,11 +66,11 @@ LOG_UPDATER_PORT = 2222
 
 DEVELOPING = True
 
-class PartyPlaylist(apptools.AppBuilder):
+class PartyPlaylist(peasoup.AppBuilder):
     '''Manages the application lol, such as deciding if we
     are running for the first time, running on mobile or pc etc'''
     def  __init__(self):
-        apptools.AppBuilder.__init__(self, name=APP_NAME)
+        peasoup.AppBuilder.__init__(self, name=APP_NAME)
 
     def start(self, **party_args):
         self.create_cfg(GENERAL_CFG_FILE)
@@ -291,9 +288,9 @@ if __name__ == '__main__':
     if DEVELOPING:
         sys.setrecursionlimit(175)
 
-    app_framework_instance = apptools.AppBuilder(name=APP_NAME)
+    app_framework_instance = peasoup.AppBuilder(name=APP_NAME)
     LOG_FILE = app_framework_instance.uac_bypass(LOG_FILE)
-    apptools.setup_logger(LOG_FILE)
+    peasoup.setup_logger(LOG_FILE)
     logging.info('Developer status is: %s' % DEVELOPING)
 
     MODE = 'cli'
@@ -308,7 +305,7 @@ if __name__ == '__main__':
         main = PartyPlaylist()
         main.start()
     except Exception as err:
-        apptools.handle_fatal_exception(restarter=restarter,
+        peasoup.handle_fatal_exception(restarter=restarter,
                                         error=err,
                                         file=LOG_FILE,
                                         host=LOG_UPDATER_HOST,

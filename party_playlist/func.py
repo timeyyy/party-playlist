@@ -5,7 +5,6 @@ from collections import deque
 from contextlib import suppress
 import _thread as thread
 import logging
-import queue
 
 from requests.exceptions import ConnectionError
 import yaml
@@ -32,7 +31,7 @@ class PlaylistManager():
         pass
 
     def mark_played(self, title, artist, album):
-        '''marks a track is having been played succesfu;ly'''
+        '''marks a track as having been played succesfu;ly'''
         with db_utils.connected_db(db_utils.Playlist, os.path.join(self.app.path_collection, self.app.current_collection)):
             track = db_utils.Playlist.get(db_utils.Playlist == title)
             track.times_played += 1
@@ -74,13 +73,10 @@ class PlaylistManager():
         # fnding sources for music
         # updating sources and music player when playlist changes
 
-        # basically, have any 10 streams calculated in advance..
         # if the playlists change...
         # reorganize the list if necessary
-        # recalculate until we have 10 in the list..
         # hold onto old streams incase the user presses previous..
 
-        #NO THAT IS WAY TO MUCH WORK JUST DO ALL!
         deque_lock = thread.allocate_lock()
         next_tracks = deque()
         prev_tracks = deque()

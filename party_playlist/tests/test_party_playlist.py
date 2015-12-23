@@ -79,6 +79,7 @@ class PartyPlaylistForTesting(PartyPlaylist):
         PartyPlaylist.__init__(self)
         self.create_cfg(GENERAL_CFG_FILE)
         self.setup_paths()
+        self.setup_user_cfg()
         self.party_args = party_args
         self.mask_out = mask_out
 
@@ -168,6 +169,7 @@ def test_pushing_contribution_to_collection_and_also_getting_contribution():
     with pytest.raises(StopIteration):
         next(new_contribution)
 
+    # import pdb;pdb.set_trace()
     # push the contribution
     contribution_func.push_contribution(party.path_my_contribution,
                                         contribution=TEST_CONTRIBUTION,
@@ -210,6 +212,8 @@ def test_pushing_contribution_to_collection_and_also_getting_contribution():
 #TODO make sure pushing works for multiple...
 
 def test_process_tracks():
+    cfg = func.get_config()
+
     party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', 'setup_music_player', stdin=False)
     party.start()
 
@@ -229,9 +233,9 @@ def test_process_tracks():
     process_tracks.process_tracks(collection_path=party.path_collection,
                         collection=TEST_COLLECTION,
                         contribution_path=party.path_other_contribution,
-                        contribution=TEST_CONTRIBUTION)
+                        contribution=TEST_CONTRIBUTION,
+                        cfg=cfg)
 
-    cfg = func.get_config()
     with db_utils.connected_collection(os.path.join(party.path_collection, TEST_COLLECTION)):
         song = db_utils.ScoredTrack.get(db_utils.ScoredTrack.title=='test_title')
         assert song.title == 'test_title'
@@ -245,7 +249,6 @@ def test_process_tracks():
         our_score = json.loads(song.userscores)[TEST_USER]
         assert our_score == cfg['scoring']['hits_per_track']
 
-        import pdb;pdb.set_trace()
         track = db_utils.Playlist.get(db_utils.Playlist.title == 'test_title')
         assert int(track.score) == cfg['scoring']['hits_per_track'] + cfg['scoring']['multiple_user']
 
@@ -266,7 +269,8 @@ def test_process_tracks():
     process_tracks.process_tracks(collection_path=party.path_collection,
                                   collection=TEST_COLLECTION,
                                   contribution_path=party.path_other_contribution,
-                                  contribution=TEST_CONTRIBUTION2)
+                                  contribution=TEST_CONTRIBUTION2,
+                                  cfg=cfg)
 
     with db_utils.connected_collection(os.path.join(party.path_collection, TEST_COLLECTION)):
         userdata = db_utils.UserData.get(db_utils.UserData.unique_name==TEST_USER)
@@ -310,10 +314,10 @@ def test_tracks_on_queue_get_made_into_playlist():
             assert song.artist == 'test_artist'
             assert song.genre == 'test_genre'
 
-@pytest.mark.a
 def test_vlc_player():
     party = PartyPlaylistForTesting('find_new_tracks', 'process_tracks', stdin=False)
-    party.user_cfg['playling']['player'] = 'vlc'
+    pdb.set_trace()
+    party.user_cfg['playing']['music_player'] = 'vlc'
 
     # from plugin.musicplayer.vlc import MusicPlayer
     # cfg = func.get_config()
@@ -336,11 +340,23 @@ def test_songs_get_found_from_wifi():
     pass
 '''
 #TODO incomplete
-@pytest.mark.xfail
-def test_make_songs_and_new_playlist_and_play():
+
+@pytest.mark.n
+def test_playlistmanager():
+    '''Tests the following:
+     that we keep track of songs that have been played,
+     after a new contribution the our reorganization algo is run
+     reorganizatoin algo doesn't look for sources we already have
+     hitting previous doesn't look for sources we already have
+'''
     # New collection
     party = PartyPlaylistForTesting('setup_music_player', stdin=False)
     party.start()
+
+    #todo test all sources
+    song_source = party.user_cfg['playing']['song_source']
+    playlistmanager = func.PlaylistManager(app=party)
+    thread.start_new_thread(playlistmanager.monitor,(),dict(play=False, song_source=song_source))
 
     # make our contribution
     home = os.path.expanduser("~")

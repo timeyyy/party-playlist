@@ -133,12 +133,12 @@ def push_contribution(my_contribution_path, contribution, output_path, collectio
         pass
     elif push_method == 'test':
         print('copying {0}, to {1}'.format(source, output))
+        os.makedirs(output_path, exist_ok=True)
         shutil.copyfile(source, output)
 
     with db_utils.connected_db(db_utils.UserData, output):
         userdata = db_utils.UserData.get()
         user = userdata.unique_name
-
 
     with db_utils.connected_db(db_utils.CollectionInfo, os.path.join(collection_path, collection)):
         collection_info = db_utils.CollectionInfo.get()
