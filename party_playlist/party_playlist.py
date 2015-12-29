@@ -42,18 +42,11 @@ try:
 except ImportError:pass
 from docopt import docopt
 
-try:
-    from . import func
-    from . import db_utils
-    from . import contribution_func
-    from . import collection_func
-    from . import process_tracks
-except SystemError:
-    import func
-    import db_utils
-    import contribution_func
-    import collection_func
-    import process_tracks
+from party_playlist import func
+from party_playlist import db_utils
+from party_playlist import contribution_func
+from party_playlist import collection_func
+from party_playlist import process_tracks
 
 APP_NAME = 'uncrumpled'
 GENERAL_CFG_FILE = 'flags.cfg'
@@ -249,20 +242,11 @@ class Party():
         player = self.app.user_cfg['playing']['music_player']
         song_source = self.app.user_cfg['playing']['song_source']
         if player == 'aplay':
-            try:
-                from .plugin.musicplayer import aplay as player
-            except SystemError:
-                from plugin.musicplayer import aplay as player
+            from party_playlist.plugin.musicplayer import aplay as player
         elif player == 'vlc':
-            try:
-                from .plugin.musicplayer import vlc as player
-            except SystemError:
-                from plugin.musicplayer import vlc as player
-                if song_source == 'youtube':
-                    try:
-                        from .plugin.songsource import youtube as source
-                    except SystemError:
-                        from plugin.songsource import youtube as source
+            from party_playlist.plugin.musicplayer import vlc as player
+        if song_source == 'youtube':
+            from party_playlist.plugin.songsource import youtube as source
         self.app.music_player = player.MusicPlayer(self.app, self.app.user_cfg)
         song_source = source.MusicSource(self.app.user_cfg)
         self.check_plugin_compatibility(self.app.music_player, song_source)

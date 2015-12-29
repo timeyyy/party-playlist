@@ -15,8 +15,8 @@ if os.name == 'nt':
     import colorama
     from termcolor import colored
 
-import db_utils
-import contribution_func
+from party_playlist import db_utils
+from party_playlist import contribution_func
 
 # TODO how to safely use a class instance across threads?
 
@@ -26,6 +26,76 @@ class PlaylistManager():
         self.app = app
         self.old_index = 0
         self.updated = False
+
+    def start(self, play, song_source):
+        thread.start_new_thread(self.montior_player_state)
+        thread.start_new_thread(self.load_music)
+
+    def montior_player_state(self):
+        '''
+        Records when songs are finished playing
+        '''
+        deque_lock = thread.allocate_lock()
+        next_tracks = deque()
+        prev_tracks = deque()
+
+    def load_music(self, play, song_source):
+        '''
+        finds sources for music updating music player when required
+        if the playlists change...
+         - reorganize the list if necessary
+         - holds onto old streams incase the user presses previous..
+        '''
+
+        tracks = self.get_tracks()
+        while 1:
+            if self.collection_updated():
+                tracks = self.get_tracks()
+            else:
+                self.block_until_we_can_add()
+                tracks = self.get_tracks()
+            if tracks:
+                for track in tracks:
+                    if self.collection_updated():
+                        break
+                    else:
+                        self.smash_that_record_on_baby()
+
+            # todo also check a queu if other ppl want to stop playing/continue playing.. and change thits accordingly
+            if play:
+                time.sleep(1)
+                self.app.music_player.play()
+
+    def smash_that_record_on_baby(self, song_source, track):
+        '''
+        Loads a song from a song source and makes sure its the correct stream,
+        TODO Does some caching of the stream and records if it was the correct one
+        Then puts them on the playlist
+        '''
+        try:
+            logging.info('looking for song sources for {0} - {1}'.format(track.title, track.artist))
+            results = song_source.load(track)
+        except ConnectionError:
+            #TODO handle this properly!
+            logging.warning('Connection Error to internet')
+            print('Connection Error...')
+            return
+        if type(results) == str:   # a single argument or arument string (local dir)
+            self.app.music_player.add_track(results)
+            next_tracks.append(results)
+        else:                           # a stream itemk
+            # TODO FALL BACK ONTO HARDRIVE...
+            # Todo save this in the database or keep a server hosted database of best sources?? mm ?
+            # TODO filter out cruddy results!
+            try:
+                self.app.music_player.add_track(results[0])
+                # can take a while to add the track over the network
+            except IndexError:
+                pass
+            else:
+                next_tracks.append(track)
+
+
 
     def reset_times_played(self):
         pass
@@ -37,11 +107,8 @@ class PlaylistManager():
             track.times_played += 1
 
 
-    def get_tracks(self, amount):
-        '''Returns tracks to be played, this returns results in chunks.
-        Our orm is
-        under the hood rescans the playlist to see if updates have been made,
-        remembers its position'''
+    def get_tracks(self):
+        '''Returns tracks to be played.'''
         assert type(amount) == int or amount == 'all'
         if amount == 'all':
             amount = 30000
@@ -67,111 +134,60 @@ class PlaylistManager():
             print(track.title)
 
 
-    def monitor(self, play, song_source):
-        # monitors our music player, takes care of
-        # keeping track of which songs have been played succefully
-        # fnding sources for music
-        # updating sources and music player when playlist changes
-
-        # if the playlists change...
-        # reorganize the list if necessary
-        # hold onto old streams incase the user presses previous..
-
-        deque_lock = thread.allocate_lock()
-        next_tracks = deque()
-        prev_tracks = deque()
-        def nexted_deque():
-            with deque_lock:
-                prev_tracks.appendleft(next_tracks.popleft())
-        def preved_deque():
-            with deque_lock:
-                next_tracks.appendleft(prev_tracks.popleft())
+    def nexted_deque():
+        with deque_lock:
+            prev_tracks.appendleft(next_tracks.popleft())
+    def preved_deque():
+        with deque_lock:
+            next_tracks.appendleft(prev_tracks.popleft())
 
 
-        def skipped_or_completed(mode='unsure'):
-            '''checks if a track was skipped or completed and marks it as so in the playlist'''
-            assert mode in ('unsure', 'completed')
+    def skipped_or_completed(mode='unsure'):
+        '''checks if a track was skipped or completed and marks it as so in the playlist'''
+        assert mode in ('unsure', 'completed')
 
 
-        def check_next_prev():
-            '''this gets called when the user presses next or prev on the player
-            if the track was listend to  90 % we mark it as complete, otherwise 
-            we mark it as skipped
-            the deques monitoring the tracks on the music player get updated as well'''
-            while 1:
-                action, track = self.app.music_player.next_prev_queue.get()
-                if action == 'next':
-                    nexted_deque()
-                elif action == 'prev':
-                    preved_deque()
-                skipped_or_completed(track)
-
-        thread.start_new_thread(check_next_prev, ())
-
-        def remove_completed_songs_from_deque(lock):
-            while 1:
-                track = self.app.music_player.finished_playing_track()
-                if track:
-                    nexted_deque()
-                    skipped_or_completed(track, mode='completed')
-                time.sleep(5)
-
-        thread.start_new_thread(remove_completed_songs_from_deque, ())
-
-
-        def collection_updated():
-            '''removes all besides the current song from our player and from our queue'''
-            # when a user has pushed a contribution updating the collection, or collection settings have been trigged
-            with suppress(AttributeError):
-                if self.app.collection_updated:
-                    del next_tracks[:-1]
-                    # self.music_player.delete()
-                    return True
-
-        def block_until_we_can_add():
-            while 1:
-                if collection_updated():
-                    return
-                time.sleep(1)
-
-        tracks = self.get_tracks()
+    def check_next_prev(self):
+        '''this gets called when the user presses next or prev on the player
+        if the track was listend to  90 % we mark it as complete, otherwise
+        we mark it as skipped
+        the deques monitoring the tracks on the music player get updated as well'''
         while 1:
-            if collection_updated():
-                tracks = self.get_tracks()
-            else:
-                block_until_we_can_add()
-                tracks = self.get_tracks()
-            if tracks:
-                for track in tracks:
-                    if collection_updated():
-                        break
-                    try:
-                        logging.info('looking for song sources for {0} - {1}'.format(track.title, track.artist))
-                        results = song_source.load(track)
-                    except ConnectionError:
-                        #TODO handle this problerly
-                        logging.warning('Connection Error to internet')
-                        print('Connection Error...')
-                        return
-                    if type(results) == str:   # a single argument or arument string (local dir)
-                        self.app.music_player.add_track(results)
-                        next_tracks.append(results)
-                    else:                           # a stream itemk
-                        # TODO FALL BACK ONTO HARDRIVE...
-                        # Todo save this in the database or keep a server hosted database of best sources?? mm ?
-                        # TODO filter out cruddy results!
-                        try:
-                            self.app.music_player.add_track(results[0])
-                            # can take a while to add the track over the network
-                        except IndexError:
-                            pass
-                        else:
-                            next_tracks.append(track)
+            action, track = self.app.music_player.next_prev_queue.get()
+            if action == 'next':
+                nexted_deque()
+            elif action == 'prev':
+                preved_deque()
+            skipped_or_completed(track)
 
-            # todo also check a queu if other ppl want to stop playing/continue playing.. and change thits accordingly
-            if play:
-                time.sleep(1)
-                self.app.music_player.play()
+    thread.start_new_thread(check_next_prev, ())
+
+    def remove_completed_songs_from_deque(lock):
+        while 1:
+            track = self.app.music_player.finished_playing_track()
+            if track:
+                nexted_deque()
+                skipped_or_completed(track, mode='completed')
+            time.sleep(5)
+
+    thread.start_new_thread(remove_completed_songs_from_deque, ())
+
+
+    def collection_updated(self):
+        '''removes all besides the current song from our player and from our queue'''
+        # when a user has pushed a contribution updating the collection, or collection settings have been changed
+        with suppress(AttributeError):
+            if self.app.collection_updated:
+                del next_tracks[:-1]
+                # self.music_player.delete()
+                return True
+
+    def block_until_we_can_add(self):
+        while 1:
+            if self.collection_updated():
+                return
+            time.sleep(1)
+
 
 
 class Prompt():
@@ -331,7 +347,7 @@ class Prompt():
 
 
 def get_config():
-    with open("config.conf", 'r') as ymlfile:
+    with open(os.path.abspath('config.conf'), 'r') as ymlfile:
         cfg = yaml.safe_load(ymlfile)
     return cfg
 

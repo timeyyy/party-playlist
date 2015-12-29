@@ -3,12 +3,9 @@ import json
 import sys
 import datetime
 
-import yaml
+from party_playlist import db_utils, func
 
-import db_utils
-
-with open("config.conf", 'r') as ymlfile:
-    CFG = yaml.load(ymlfile)
+CFG = func.get_config()
 
 '''
 a collection or event is the main thing a user creates, it contains

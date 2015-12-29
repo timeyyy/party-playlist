@@ -344,19 +344,19 @@ def test_songs_get_found_from_wifi():
 @pytest.mark.n
 def test_playlistmanager():
     '''Tests the following:
-     that we keep track of songs that have been played,
-     after a new contribution the our reorganization algo is run
-     reorganizatoin algo doesn't look for sources we already have
-     hitting previous doesn't look for sources we already have
+        - that we keep track of songs that have been played,
+        - after a new contribution the our reorganization algo is run
+        - reorganizatoin algo doesn't look for sources we already have
+        - hitting previous doesn't look for sources we already have
 '''
     # New collection
     party = PartyPlaylistForTesting('setup_music_player', stdin=False)
     party.start()
 
     #todo test all sources
-    song_source = party.user_cfg['playing']['song_source']
+    from party_playlist.plugin.songsource import hard_disk as song_source
     playlistmanager = func.PlaylistManager(app=party)
-    thread.start_new_thread(playlistmanager.monitor,(),dict(play=False, song_source=song_source))
+    playlistmanager.start(play=False, song_source=song_source)
 
     # make our contribution
     home = os.path.expanduser("~")

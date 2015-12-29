@@ -15,7 +15,7 @@ except SystemError:
 
 class FindMusic():
     '''finds tracks on mobile devices, computers and online accounts
-    can tweak the folders to search before, and after you can see the tracks and which folders the came from,
+    can tweak the folders to search before, and after you can see the tracks and which folders they came from,
     exclude any tracks/folders that are irrelevant before saving the users tracks'''
     def __init__(self, app, device, db_name):
         self.device = device

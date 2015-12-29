@@ -9,12 +9,14 @@ import logging
 
 import pafy
 
+from party_playlist.plugin.songsource import SongSource
+
 yt_api_endpoint = 'https://www.googleapis.com/youtube/v3/'
 yt_key = 'AIzaSyAl1Xq9DwdE_KD4AtPaE4EJl3WZe2zCqg4'
 session = requests.Session()
 
-class MusicSource():
-    def __init__(self, args):
+class MusicSource(SongSource):
+    def __init__(self, cfg):
         self.features = ('stream',)
     
     def load(self, track):
