@@ -109,23 +109,14 @@ class PlaylistManager():
 
     def get_tracks(self):
         '''Returns tracks to be played.'''
-        assert type(amount) == int or amount == 'all'
-        if amount == 'all':
-            amount = 30000
-        tracks = []
-        start = self.old_index
-        end = start + amount
-        with db_utils.connected_db(db_utils.Playlist, os.path.join(self.app.path_collection, self.app.current_collection)):
-            #todo make it order also by the times played field
-            #todo make it take into account if the playlist has been updated? is that required mm
-            #what i do depends on how hard it is to delete playlist data from vlc...
-            for i, track in enumerate(db_utils.Playlist.select().order_by(db_utils.Playlist.score)):
-                if i >= start and i < end:
-                    tracks.append(track)
-                elif i == end:
-                    self.old_index = i
-                    break
-        return tracks
+        def generator_make():
+            with db_utils.connected_db(db_utils.Playlist, os.path.join(self.app.path_collection, self.app.current_collection)):
+                #todo make it order also by the times played field
+                #todo make it take into account if the playlist has been updated? is that required mm
+                #what i do depends on how hard it is to delete playlist data from vlc...
+                for i, track in enumerate(db_utils.Playlist.select().order_by(db_utils.Playlist.score)):
+                    yield track
+        return generator_make()
 
     def list_tracks_in_playlist(self):
         for track in prev_tracks:
