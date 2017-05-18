@@ -26,18 +26,28 @@ class PlaylistManager():
         self.app = app
         self.old_index = 0
         self.updated = False
+        self.deque_lock = thread.allocate_lock()
+        self.next_tracks = deque()
+        self.prev_tracks = deque()
 
     def start(self, play, song_source):
-        thread.start_new_thread(self.montior_player_state)
-        thread.start_new_thread(self.load_music)
+        thread.start_new_thread(self.check_next_prev, ())
+        thread.start_new_thread(self.remove_completed_songs_from_deque, ())
+        thread.start_new_thread(self.load_music, ())
 
-    def montior_player_state(self):
+    def check_next_prev(self):
+        '''this gets called when the user presses next or prev on the player
+        if the track was listend to  90 % we mark it as complete, otherwise
+        we mark it as skipped
         '''
-        Records when songs are finished playing
-        '''
-        deque_lock = thread.allocate_lock()
-        next_tracks = deque()
-        prev_tracks = deque()
+        while 1:
+            action, track = self.app.music_player.next_prev_queue.get()
+            if action == 'next':
+                self.nexted_deque()
+            elif action == 'prev':
+                self.preved_deque()
+            self.skipped_or_completed(track)
+
 
     def load_music(self, play, song_source):
         '''
@@ -82,7 +92,7 @@ class PlaylistManager():
             return
         if type(results) == str:   # a single argument or arument string (local dir)
             self.app.music_player.add_track(results)
-            next_tracks.append(results)
+            self.next_tracks.append(results)
         else:                           # a stream itemk
             # TODO FALL BACK ONTO HARDRIVE...
             # Todo save this in the database or keep a server hosted database of best sources?? mm ?
@@ -93,7 +103,7 @@ class PlaylistManager():
             except IndexError:
                 pass
             else:
-                next_tracks.append(track)
+                self.next_tracks.append(track)
 
 
 
@@ -101,7 +111,7 @@ class PlaylistManager():
         pass
 
     def mark_played(self, title, artist, album):
-        '''marks a track as having been played succesfu;ly'''
+        '''marks a track as having been played succesfully'''
         with db_utils.connected_db(db_utils.Playlist, os.path.join(self.app.path_collection, self.app.current_collection)):
             track = db_utils.Playlist.get(db_utils.Playlist == title)
             track.times_played += 1
@@ -119,49 +129,35 @@ class PlaylistManager():
         return generator_make()
 
     def list_tracks_in_playlist(self):
-        for track in prev_tracks:
+        #Todo use coroutine and pass in method to run... e.g printer etc
+        for track in self.prev_tracks:
             print(track.title)
-        for track in next_tracks:
+        for track in self.next_tracks:
             print(track.title)
 
 
-    def nexted_deque():
-        with deque_lock:
-            prev_tracks.appendleft(next_tracks.popleft())
-    def preved_deque():
-        with deque_lock:
-            next_tracks.appendleft(prev_tracks.popleft())
+    def nexted_deque(self):
+        with self.deque_lock:
+            self.prev_tracks.appendleft(self.next_tracks.popleft())
+    def preved_deque(self):
+        with self.deque_lock:
+            self.next_tracks.appendleft(self.prev_tracks.popleft())
 
 
+    @staticmethod
     def skipped_or_completed(mode='unsure'):
         '''checks if a track was skipped or completed and marks it as so in the playlist'''
         assert mode in ('unsure', 'completed')
 
 
-    def check_next_prev(self):
-        '''this gets called when the user presses next or prev on the player
-        if the track was listend to  90 % we mark it as complete, otherwise
-        we mark it as skipped
-        the deques monitoring the tracks on the music player get updated as well'''
-        while 1:
-            action, track = self.app.music_player.next_prev_queue.get()
-            if action == 'next':
-                nexted_deque()
-            elif action == 'prev':
-                preved_deque()
-            skipped_or_completed(track)
-
-    thread.start_new_thread(check_next_prev, ())
-
-    def remove_completed_songs_from_deque(lock):
+    def remove_completed_songs_from_deque(self):
+        '''also records the tracks completion state'''
         while 1:
             track = self.app.music_player.finished_playing_track()
             if track:
-                nexted_deque()
-                skipped_or_completed(track, mode='completed')
+                self.nexted_deque()
+                self.skipped_or_completed(track, mode='completed')
             time.sleep(5)
-
-    thread.start_new_thread(remove_completed_songs_from_deque, ())
 
 
     def collection_updated(self):
@@ -169,7 +165,7 @@ class PlaylistManager():
         # when a user has pushed a contribution updating the collection, or collection settings have been changed
         with suppress(AttributeError):
             if self.app.collection_updated:
-                del next_tracks[:-1]
+                del self.next_tracks[:-1]
                 # self.music_player.delete()
                 return True
 
@@ -178,7 +174,6 @@ class PlaylistManager():
             if self.collection_updated():
                 return
             time.sleep(1)
-
 
 
 class Prompt():

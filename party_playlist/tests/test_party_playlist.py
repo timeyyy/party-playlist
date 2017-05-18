@@ -341,6 +341,8 @@ def test_songs_get_found_from_wifi():
 '''
 #TODO incomplete
 
+# Need to tests  that a finished song doesnt raise true or false when we press next or prev
+
 @pytest.mark.n
 def test_playlistmanager():
     '''Tests the following:
@@ -351,7 +353,7 @@ def test_playlistmanager():
 '''
     # New collection
     party = PartyPlaylistForTesting('setup_music_player', stdin=False)
-    party.start()
+    # party.start()
 
     #todo test all sources
     from party_playlist.plugin.songsource import hard_disk as song_source
@@ -361,6 +363,7 @@ def test_playlistmanager():
     # make our contribution
     home = os.path.expanduser("~")
     finder = MockFinder(TEST_USER, app=party, device='pc', db_name=TEST_CONTRIBUTION)
+    #TODO CHANGE THIS SO IT GETS SONGS FROM A TESTFOLDER
     finder.folders(paths=[os.path.join(home,'Music')], default_paths=False)
 
     # push the contribution

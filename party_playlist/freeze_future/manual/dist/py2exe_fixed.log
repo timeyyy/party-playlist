@@ -1,0 +1,85 @@
+Traceback (most recent call last):
+  File "py2exe_fixed.py", line 5, in <module>
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\site-packages\past\__init__.py", line 88, in <module>
+    from past.translation import install_hooks as autotranslate
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\site-packages\past\translation\__init__.py", line 42, in <module>
+    from lib2to3.refactor import RefactoringTool
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\lib2to3\refactor.py", line 27, in <module>
+    from .fixer_util import find_root
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\lib2to3\fixer_util.py", line 9, in <module>
+    from .pygram import python_symbols as syms
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\lib2to3\pygram.py", line 32, in <module>
+    python_grammar = driver.load_grammar(_GRAMMAR_FILE)
+  File "C:\Python34\lib\lib2to3\pgen2\driver.py", line 121, in load_grammar
+    g = pgen.generate_grammar(gt)
+  File "C:\Python34\lib\lib2to3\pgen2\pgen.py", line 385, in generate_grammar
+    p = ParserGenerator(filename)
+  File "C:\Python34\lib\lib2to3\pgen2\pgen.py", line 15, in __init__
+    stream = open(filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\timeyyy\\Dropbox\\programming\\freeze_future\\freeze_future\\manual\\dist\\library.zip\\lib2to3\\Grammar.txt'
+Traceback (most recent call last):
+  File "py2exe_fixed.py", line 5, in <module>
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\site-packages\past\__init__.py", line 88, in <module>
+    from past.translation import install_hooks as autotranslate
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\site-packages\past\translation\__init__.py", line 42, in <module>
+    from lib2to3.refactor import RefactoringTool
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\lib2to3\refactor.py", line 27, in <module>
+    from .fixer_util import find_root
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\lib2to3\fixer_util.py", line 9, in <module>
+    from .pygram import python_symbols as syms
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1191, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1161, in _load_backward_compatible
+  File "C:\Python34\lib\lib2to3\pygram.py", line 32, in <module>
+    python_grammar = driver.load_grammar(_GRAMMAR_FILE)
+  File "C:\Python34\lib\lib2to3\pgen2\driver.py", line 121, in load_grammar
+    g = pgen.generate_grammar(gt)
+  File "C:\Python34\lib\lib2to3\pgen2\pgen.py", line 385, in generate_grammar
+    p = ParserGenerator(filename)
+  File "C:\Python34\lib\lib2to3\pgen2\pgen.py", line 15, in __init__
+    stream = open(filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\timeyyy\\Dropbox\\programming\\freeze_future\\freeze_future\\manual\\dist\\library.zip\\lib2to3\\Grammar.txt'
+Traceback (most recent call last):
+  File "py2exe_fixed.py", line 5, in <module>
+  File "C:\Python34\lib\site-packages\past\__init__.py", line 88, in <module>
+    from past.translation import install_hooks as autotranslate
+  File "C:\Python34\lib\site-packages\past\translation\__init__.py", line 41, in <module>
+    from lib2to3.pgen2.parse import ParseError
+ImportError: No module named 'lib2to3'

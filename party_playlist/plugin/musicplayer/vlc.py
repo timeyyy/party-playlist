@@ -74,7 +74,7 @@ class MusicPlayer(Player):
         else:
             logging.debug('Vlc player currently not playing...')
 
-    def finished_playing_track(self, lock):
+    def finished_playing_track(self):
         '''lets us know when a track is finished playing'''
         feedback = self.communicate('stats').decode('utf-8')
         stats = feedback.split('\n')
@@ -85,7 +85,7 @@ class MusicPlayer(Player):
                 bytes_read = int(dirty.split(' ')[0])
                 break
         else:
-            logging.debug('Vlc playe currently not playing...')
+            logging.debug('Vlc player currently not playing...')
 
         feedback = self.communicate('status').decode('utf-8')
         status = feedback.split('\n')
@@ -95,7 +95,7 @@ class MusicPlayer(Player):
                 dirty = line.split(':')[2]
                 playing_track = dirty.split(' )\r')[0]
                 try:
-                    if playling_track == self.last_played:
+                    if playing_track == self.last_played:
                         return False
                     else:
                         # track has been changed
@@ -105,7 +105,7 @@ class MusicPlayer(Player):
                     self.last_played = playing_track
                     return False
         else:
-            logging.debug('Vlc playe currently not playing...')
+            logging.debug('Vlc player currently not playing...')
 
     def shutdown_player(self):
         self.communicate('shutdown')
